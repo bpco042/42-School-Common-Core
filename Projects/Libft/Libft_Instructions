@@ -1,0 +1,94 @@
+#Libft#
+
+O primeiro projeto da 42 School, o **libft**, consiste em aprender como funcionam as funções padrão da linguagem C, codificando-as do zero e criando a sua própria biblioteca.
+
+Este projeto se assemelha muito ao que é praticado durante a Piscine.
+
+---
+
+## Status
+
+✅ Finalizado: Não
+🏅 Nota: **00/100**
+
+---
+
+## Como usar
+
+- `make` para compilar as funções obrigatórias.
+- `make bonus` para compilar com as funções bônus.
+
+---
+
+## Funções Incluídas
+
+### Funções Obrigatórias
+
+As funções obrigatórias do **libft** são, em sua maioria, funções da biblioteca padrão do C, além de outras funções úteis. Elas são principalmente voltadas para a manipulação de caracteres, strings e memória.  
+Essas **34 funções obrigatórias** precisam estar implementadas corretamente para garantir uma nota de 100%.
+
+#### Funções para verificação e manipulação de caracteres:
+
+- `ft_isalpha`
+- `ft_isdigit`
+- `ft_isalnum`
+- `ft_isascii`
+- `ft_isprint`
+- `ft_toupper`
+- `ft_tolower`
+
+#### Funções para manipulação de strings:
+
+- `ft_strlen`
+- `ft_strlcpy`
+- `ft_strlcat`
+- `ft_strchr`
+- `ft_strrchr`
+- `ft_strncmp`
+- `ft_strnstr`
+- `ft_substr`
+- `ft_strjoin`
+- `ft_strtrim`
+- `ft_split`
+- `ft_strmapi`
+- `ft_striteri`
+
+#### Funções para manipulação de memória:
+
+- `ft_calloc`
+- `ft_memset`
+- `ft_bzero`
+- `ft_memcpy`
+- `ft_memmove`
+- `ft_memchr`
+- `ft_memcmp`
+- `ft_strdup`
+
+#### Funções para manipulação de números:
+
+- `ft_atoi`
+- `ft_itoa`
+
+#### Funções para escrita em descritores de arquivo:
+
+- `ft_putchar_fd`
+- `ft_putstr_fd`
+- `ft_putendl_fd`
+- `ft_putnbr_fd`
+
+---
+
+### Funções Bônus
+
+As funções bônus do **libft** lidam com a manipulação de listas encadeadas.
+
+- `ft_lstnew`
+- `ft_lstadd_front`
+- `ft_lstsize`
+- `ft_lstlast`
+- `ft_lstadd_back`
+- `ft_lstdelone`
+- `ft_lstclear`
+- `ft_lstiter`
+- `ft_lstmap`
+
