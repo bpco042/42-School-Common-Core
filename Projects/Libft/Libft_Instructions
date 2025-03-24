@@ -92,3 +92,60 @@ As funções bônus do **libft** lidam com a manipulação de listas encadeadas.
 - `ft_lstiter`
 - `ft_lstmap`
 
+
+
+----------------------------------------------------------------------------------------------
+Aqui está uma sugestão para a construção da biblioteca. Inicia-se pelas réplicas mais simples (tanto de lógico quanto de código) e finaliza-se com as mais complexas.
+
+#### ✅ Funções mais simples (lógica direta)
+
+- `ft_isalpha`  
+- `ft_isdigit`  
+- `ft_isalnum`  
+- `ft_isascii`  
+- `ft_isprint`  
+- `ft_toupper`  
+- `ft_tolower`  
+- `ft_putchar_fd`  
+- `ft_putstr_fd`  
+- `ft_putendl_fd`
+
+---
+
+#### 🔨 Funções de dificuldade baixa/média (manipulação de dados simples)
+
+- `ft_strlen`  
+- `ft_bzero`  
+- `ft_memset`  
+- `ft_memcpy`  
+- `ft_strchr`  
+- `ft_strrchr`  
+- `ft_strncmp`  
+- `ft_putnbr_fd`  
+- `ft_memchr`  
+- `ft_memcmp`
+
+---
+
+#### ⚙️ Funções de dificuldade média (controle de fluxos e verificações)
+
+- `ft_strdup`  
+- `ft_strlcpy`  
+- `ft_strlcat`  
+- `ft_substr`  
+- `ft_strjoin`  
+- `ft_strtrim`  
+- `ft_atoi`  
+- `ft_calloc`  
+- `ft_memmove`
+
+---
+
+#### 🚀 Funções mais desafiadoras (alocação dinâmica, múltiplas etapas, lógica complexa)
+
+- `ft_split`  
+- `ft_strnstr`  
+- `ft_strmapi`  
+- `ft_striteri`  
+- `ft_itoa`
+
