@@ -3,9 +3,9 @@
 
 int main(void)
 {
-    char c = 'a';
+    char c = ' ';
 
-    if (ft_isalpha(c))  // Se for uma letra, ft_isalpha retorna 1
+    if (ft_isalnum(c))  // Se for uma letra, ft_isalpha retorna 1
     {
         printf("É alfanumérico.\n");
         return 0;  // Retorna 0 se for uma letra
