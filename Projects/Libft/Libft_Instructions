@@ -99,13 +99,13 @@ Aqui está uma sugestão para a construção da biblioteca. Inicia-se pelas rép
 
 #### ✅ Funções mais simples (lógica direta)
 
-- `ft_isalpha`  
-- `ft_isdigit`  
-- `ft_isalnum`  
-- `ft_isascii`  
-- `ft_isprint`  
-- `ft_toupper`  
-- `ft_tolower`  
+- `✅ft_isalpha`  
+- `✅ft_isdigit`  
+- `✅ft_isalnum`  
+- `✅ft_isascii`  
+- `✅ft_isprint`  
+- `✅ft_toupper`  
+- `✅ft_tolower`  
 - `ft_putchar_fd`  
 - `ft_putstr_fd`  
 - `ft_putendl_fd`
@@ -114,13 +114,13 @@ Aqui está uma sugestão para a construção da biblioteca. Inicia-se pelas rép
 
 #### 🔨 Funções de dificuldade baixa/média (manipulação de dados simples)
 
-- `ft_strlen`  
+- `✅ft_strlen`  
 - `ft_bzero`  
 - `ft_memset`  
 - `ft_memcpy`  
-- `ft_strchr`  
-- `ft_strrchr`  
-- `ft_strncmp`  
+- `✅ft_strchr`  
+- `✅ft_strrchr`  
+- `✅ft_strncmp`  
 - `ft_putnbr_fd`  
 - `ft_memchr`  
 - `ft_memcmp`
@@ -130,9 +130,9 @@ Aqui está uma sugestão para a construção da biblioteca. Inicia-se pelas rép
 #### ⚙️ Funções de dificuldade média (controle de fluxos e verificações)
 
 - `ft_strdup`  
-- `ft_strlcpy`  
-- `ft_strlcat`  
-- `ft_substr`  
+- `✅ft_strlcpy`  
+- `✅ft_strlcat`  
+- `✅ft_substr`  
 - `ft_strjoin`  
 - `ft_strtrim`  
 - `ft_atoi`  
@@ -144,7 +144,7 @@ Aqui está uma sugestão para a construção da biblioteca. Inicia-se pelas rép
 #### 🚀 Funções mais desafiadoras (alocação dinâmica, múltiplas etapas, lógica complexa)
 
 - `ft_split`  
-- `ft_strnstr`  
+- `✅ft_strnstr`  
 - `ft_strmapi`  
 - `ft_striteri`  
 - `ft_itoa`
