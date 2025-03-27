@@ -117,11 +117,11 @@ Aqui está uma sugestão para a construção da biblioteca. Inicia-se pelas rép
 - `✅ft_strlen`  
 - `✅ft_bzero`  
 - `✅ft_memset`  
-- `ft_memcpy`  
+- `✅ft_memcpy`  
 - `✅ft_strchr`  
 - `✅ft_strrchr`  
 - `✅ft_strncmp`  
-- `ft_putnbr_fd`  
+- `✅ft_putnbr_fd`  
 - `ft_memchr`  
 - `ft_memcmp`
 
