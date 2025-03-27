@@ -106,17 +106,17 @@ Aqui está uma sugestão para a construção da biblioteca. Inicia-se pelas rép
 - `✅ft_isprint`  
 - `✅ft_toupper`  
 - `✅ft_tolower`  
-- `ft_putchar_fd`  
-- `ft_putstr_fd`  
-- `ft_putendl_fd`
+- `✅ft_putchar_fd`  
+- `✅ft_putstr_fd`  
+- `✅ft_putendl_fd`
 
 ---
 
 #### 🔨 Funções de dificuldade baixa/média (manipulação de dados simples)
 
 - `✅ft_strlen`  
-- `ft_bzero`  
-- `ft_memset`  
+- `✅ft_bzero`  
+- `✅ft_memset`  
 - `ft_memcpy`  
 - `✅ft_strchr`  
 - `✅ft_strrchr`  
