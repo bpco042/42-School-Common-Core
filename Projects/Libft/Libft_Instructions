@@ -122,8 +122,8 @@ Aqui está uma sugestão para a construção da biblioteca. Inicia-se pelas rép
 - `✅ft_strrchr`  
 - `✅ft_strncmp`  
 - `✅ft_putnbr_fd`  
-- `ft_memchr`  
-- `ft_memcmp`
+- `✅ft_memchr`  
+- `✅ft_memcmp`
 
 ---
 
