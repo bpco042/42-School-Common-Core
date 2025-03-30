@@ -129,7 +129,7 @@ Aqui está uma sugestão para a construção da biblioteca. Inicia-se pelas rép
 
 #### ⚙️ Funções de dificuldade média (controle de fluxos e verificações)
 
-- `ft_strdup`  
+- `✅ft_strdup`  
 - `✅ft_strlcpy`  
 - `✅ft_strlcat`  
 - `✅ft_substr`  
