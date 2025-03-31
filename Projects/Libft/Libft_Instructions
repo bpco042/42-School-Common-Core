@@ -133,7 +133,7 @@ Aqui está uma sugestão para a construção da biblioteca. Inicia-se pelas rép
 - `✅ft_strlcpy`  
 - `✅ft_strlcat`  
 - `✅ft_substr`  
-- `ft_strjoin`  
+- `✅ft_strjoin`  
 - `ft_strtrim`  
 - `ft_atoi`  
 - `ft_calloc`  
