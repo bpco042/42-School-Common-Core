@@ -135,9 +135,9 @@ Aqui está uma sugestão para a construção da biblioteca. Inicia-se pelas rép
 - `✅ft_substr`  
 - `✅ft_strjoin`  
 - `✅ft_strtrim`  
-- `ft_atoi`  
-- `ft_calloc`  
-- `ft_memmove`
+- `✅ft_atoi`  
+- `✅ft_calloc`  
+- `✅ft_memmove`
 
 ---
 
