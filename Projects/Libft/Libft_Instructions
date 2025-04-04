@@ -143,7 +143,7 @@ Aqui está uma sugestão para a construção da biblioteca. Inicia-se pelas rép
 
 #### 🚀 Funções mais desafiadoras (alocação dinâmica, múltiplas etapas, lógica complexa)
 
-- `ft_split`  
+- `✅ft_split`  
 - `✅ft_strnstr`  
 - `ft_strmapi`  
 - `ft_striteri`  
