@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bruperei <bruperei@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,24 +12,17 @@
 
 #include "libft.h"
 
-size_t    ft_strlcpy(char *dest, const char *src, size_t n)
+void    *ft_memcpy(void *dest, const void *src, size_t len)
 {
-    size_t i;
-    size_t j;
-    j = 0;
-    i = 0;
+    unsigned char *src_ptr = (unsigned char *)src;
+    unsigned char *dest_ptr = (unsigned char *)dest;
 
-    while (src[i])
-        i++;
-
-    if (n > 0)
+    while (len > 0)
     {
-        while (j < (n - 1) && src[j])
-        {
-            dest[j] = src[j];
-            j++;
-        }
-        dest[j] = '\0';
+        *dest_ptr = *src_ptr;
+        src_ptr++;
+        dest_ptr++;
+        len--;
     }
-    return (i);
+    return (dest);
 }

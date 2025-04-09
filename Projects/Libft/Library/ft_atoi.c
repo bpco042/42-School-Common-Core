@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bruperei <bruperei@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,24 +12,33 @@
 
 #include "libft.h"
 
-size_t    ft_strlcpy(char *dest, const char *src, size_t n)
+int ft_atoi(const char *str)
 {
-    size_t i;
-    size_t j;
-    j = 0;
+    int i;
+    int sign;
+    int result;
+
     i = 0;
+    sign = 1;
+    result = 0;
 
-    while (src[i])
+    while (str[i] == 32 || (str[i] >= 9 && str[i] <= 13))
         i++;
-
-    if (n > 0)
+    
+    if (str[i] == '-')
     {
-        while (j < (n - 1) && src[j])
-        {
-            dest[j] = src[j];
-            j++;
-        }
-        dest[j] = '\0';
+        sign = -1;
+        i++;
+    }    
+    else
+    {
+        i++;
     }
-    return (i);
+
+    while (str[i] && str[i] >= '0' str[i] <= '9')
+    {
+        result = (result * 10) + (str[i] - '0');
+        i++;
+    }
+    return (result * sign);
 }

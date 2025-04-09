@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bruperei <bruperei@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,24 +12,37 @@
 
 #include "libft.h"
 
-size_t    ft_strlcpy(char *dest, const char *src, size_t n)
+char    *ft_substr(char const *s, unsigned int start, size_t len)
 {
-    size_t i;
-    size_t j;
-    j = 0;
-    i = 0;
+    size_t size;
+    size_t n_len;
+    char *substr;
 
-    while (src[i])
-        i++;
+    if (!s)
+        return (NULL);ates memory (usin
 
-    if (n > 0)
+    size = ft_strlen(s);
+
+    if (start >= size)
     {
-        while (j < (n - 1) && src[j])
-        {
-            dest[j] = src[j];
-            j++;
-        }
-        dest[j] = '\0';
+        substr = malloc(1);
+        if (!substr)
+            return (NULL);
+        substr[0] = '\0';
+        return (substr);
     }
-    return (i);
+
+    if (start + len > size)
+        n_len = size - start;
+    else
+        n_len = len;
+    
+    substr = malloc(sizeof(char) * (n_len + 1));
+    if (!substr)
+        return (NULL);
+    
+    ft_memcpy(substr, s + start, n_len);
+    substr[n_len] = '\0';
+
+    return (substr);    
 }

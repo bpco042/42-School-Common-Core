@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bruperei <bruperei@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,24 +12,7 @@
 
 #include "libft.h"
 
-size_t    ft_strlcpy(char *dest, const char *src, size_t n)
+void    ft_bzero(void *dest, size_t len)
 {
-    size_t i;
-    size_t j;
-    j = 0;
-    i = 0;
-
-    while (src[i])
-        i++;
-
-    if (n > 0)
-    {
-        while (j < (n - 1) && src[j])
-        {
-            dest[j] = src[j];
-            j++;
-        }
-        dest[j] = '\0';
-    }
-    return (i);
+    ft_memset(dest, 0, len);
 }

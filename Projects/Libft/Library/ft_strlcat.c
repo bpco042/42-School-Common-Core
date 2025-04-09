@@ -1,26 +1,36 @@
-int ft_strlcat(char *dst, const char *src, int size)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bruperei <bruperei@student.42porto.com>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/04/08 11:20:18 by bruperei          #+#    #+#             */
+/*   Updated: 2025/04/08 11:35:41 by bruperei         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+#include <stdio.h>
+#include <string.h>  // Para comparar com a strlcat original
+#include "libft.h"
+
+size_t  ft_strlcat(char *dest, const char *src, size_t n)
 {
-    int i;
-    int j;
-    int k;
+    size_t i;
+    size_t j;
 
     i = 0;
     j = 0;
-    k = 0;
-    while (dst[i] != '\0')
+
+    if (!src || !dest)
+        return (0);
+    while (dest[i] && i < n - 1)
         i++;
-    while (src[j] != '\0')
-        j++;
-    if (size <= i)
-        j += size;
-    else
-        j += i;
-    while (src[k] && i + 1 < size)
+    while (src[j] && i + j < n - 1)
     {
-        dst[i] = src[k];
-        i++;
-        k++;
+        dest[i + j] = src[j];
+        j++;
     }
-    dst[i] = '\0';
-    return (j);
+    if (i + j < n)
+        dest[i + j] = '\0';
+    return (i + ft_strlen(src));
 }

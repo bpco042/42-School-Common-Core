@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bruperei <bruperei@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,24 +12,18 @@
 
 #include "libft.h"
 
-size_t    ft_strlcpy(char *dest, const char *src, size_t n)
+char    *ft_strdup(const char *src)
 {
-    size_t i;
-    size_t j;
-    j = 0;
-    i = 0;
+    size_t len;
+    char *dup;
 
-    while (src[i])
-        i++;
+    len = ft_strlen(src) + 1;
+    dup = malloc(len);
 
-    if (n > 0)
-    {
-        while (j < (n - 1) && src[j])
-        {
-            dest[j] = src[j];
-            j++;
-        }
-        dest[j] = '\0';
-    }
-    return (i);
+    if (!dup)
+        return (NULL);
+
+    ft_memcpy(dup, src, len);
+
+    return (dup);
 }

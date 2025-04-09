@@ -1,15 +1,30 @@
-int ft_strchr(const char *s, int c)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bruperei <bruperei@student.42porto.com>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/04/08 11:20:18 by bruperei          #+#    #+#             */
+/*   Updated: 2025/04/08 11:35:41 by bruperei         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+char    *ft_strchr(const char *str, int c)
 {
-    int i;
+    size_t i;
 
     i = 0;
-    while (s[i] != '\0')
+    while (str[i])
     {
-        if (s[i] == c)
-            return (i);
+        if (str[i] == (unsigned char)c)
+            return ((char *)&str[i]);
         i++;
     }
-    if (s[i] == c)
-        return (i);
-    return (-1);
+    if (str[i] == (unsigned char)c)
+        return ((char *)&str[i]);
+    return (0);
+    
 }
