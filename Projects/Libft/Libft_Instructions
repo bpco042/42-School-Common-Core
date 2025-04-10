@@ -8,7 +8,7 @@ Este projeto se assemelha muito ao que é praticado durante a Piscine.
 
 ## Status
 
-✅ Finalizado: Não
+✅ Finalizado: Sim
 🏅 Nota: **00/100**
 
 ---
@@ -82,15 +82,15 @@ Essas **34 funções obrigatórias** precisam estar implementadas corretamente p
 
 As funções bônus do **libft** lidam com a manipulação de listas encadeadas.
 
-- `ft_lstnew`
-- `ft_lstadd_front`
-- `ft_lstsize`
-- `ft_lstlast`
-- `ft_lstadd_back`
-- `ft_lstdelone`
-- `ft_lstclear`
-- `ft_lstiter`
-- `ft_lstmap`
+- `✅ft_lstnew`
+- `✅ft_lstadd_front`
+- `✅ft_lstsize`
+- `✅ft_lstlast`
+- `✅ft_lstadd_back`
+- `✅ft_lstdelone`
+- `✅ft_lstclear`
+- `✅ft_lstiter`
+- `✅ft_lstmap`
 
 
 
@@ -145,7 +145,7 @@ Aqui está uma sugestão para a construção da biblioteca. Inicia-se pelas rép
 
 - `✅ft_split`  
 - `✅ft_strnstr`  
-- `ft_strmapi`  
-- `ft_striteri`  
-- `ft_itoa`
+- `✅ft_strmapi`  
+- `✅ft_striteri`  
+- `✅ft_itoa`
 
