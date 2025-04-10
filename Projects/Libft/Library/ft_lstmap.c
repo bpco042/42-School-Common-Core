@@ -1,37 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bruperei <bruperei@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/08 11:20:18 by bruperei          #+#    #+#             */
-/*   Updated: 2025/04/08 11:35:41 by bruperei         ###   ########.fr       */
+/*   Created: 2025/04/10 16:22:18 by bruperei          #+#    #+#             */
+/*   Updated: 2025/04/10 16:55:41 by bruperei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char    *ft_strjoin(char const *s1, char const *s2)
+t_list *ft_lstmap(t_list *lst, void*(*f)(void *), void (*del)(void *))
 {
-    char    *new_str;
-    int len_s1;
-    int len_s2;
+    t_list  *new_lst;
+    t_list  *new_node;
+ 
+    new_lst = NULL;
+    new_node = NULL;
 
-    if (s1 == NULL || s2 == NULL)
+    if (!f || !lst)
         return (NULL);
     
-    len_s1 = ft_strlen(s1);
-    len_s2 = ft_strlen(s2);
-
-    new_str = malloc((len_s1 + len_s2 + 1) * sizeof(char));
-
-    if (!new_str)
-        return (NULL);
-    
-    ft_memcpy(new_str, s1, len_s1);
-    ft_memcpy(new_str + len_s1, s2, len_s2);
-    new_str[len_s1 + len_s2] = '\0';
-
-    return (new_str);
+    while (lst)
+    {
+        new_node = ft_lstnew(f(lst->content));
+        if (!new_node)
+        {
+            ft_lstclear(&new_lst, del);
+            return (NULL);
+        }
+        ft_lstadd_back(&new_lst, new_node);
+        lst = lst->next;
+    }
+    return (new_lst);
 }

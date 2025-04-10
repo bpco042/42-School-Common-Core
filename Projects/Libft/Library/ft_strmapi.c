@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bruperei <bruperei@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,26 +12,22 @@
 
 #include "libft.h"
 
-char    *ft_strjoin(char const *s1, char const *s2)
+char    *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-    char    *new_str;
-    int len_s1;
-    int len_s2;
-
-    if (s1 == NULL || s2 == NULL)
-        return (NULL);
+    unsigned int    i;
+    char    *str;
     
-    len_s1 = ft_strlen(s1);
-    len_s2 = ft_strlen(s2);
-
-    new_str = malloc((len_s1 + len_s2 + 1) * sizeof(char));
-
-    if (!new_str)
+    if (!s)
         return (NULL);
-    
-    ft_memcpy(new_str, s1, len_s1);
-    ft_memcpy(new_str + len_s1, s2, len_s2);
-    new_str[len_s1 + len_s2] = '\0';
-
-    return (new_str);
+    str = malloc(sizeof(char) * (ft_strlen(s) + 1));
+    if (!str)
+        return (NULL);
+    i = 0;
+    while(s[i])
+    {
+        str[i] = f(i, s[i]);
+        i++;
+    }
+    str[i] = '\0';
+    return (str);
 }
