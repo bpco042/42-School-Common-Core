@@ -52,3 +52,13 @@ char    *ft_itoa(int n)
     return (nb);
 
 }
+/*Converts int to a str
+int main ()
+{
+    int c = -25458;
+    char    *result;
+
+    result = ft_itoa(c);
+    printf("%s\n", result);
+}
+*/

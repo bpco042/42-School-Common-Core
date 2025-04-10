@@ -19,3 +19,11 @@ int ft_isalpha(int n)
     else
         return (0);
 }
+/*int main (void)
+{
+    printf("p is --> %d\n", ft_isalpha('p'));
+    printf("P is --> %d\n", ft_isalpha('P'));
+    printf("8 is -- > %d\n", ft_isalpha('2'));
+    printf("space is --> %d\n", ft_isalpha(' '));
+    return (0);
+}*/

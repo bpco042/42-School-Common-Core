@@ -18,3 +18,11 @@ int ft_isdigit(int n)
     else
         return (0);
 }
+/*int main(void)
+{
+    printf("8 is --> %d\n", ft_isdigit('8'));
+    printf("P is --> %d\n", ft_isdigit('P'));
+    printf("0 is --> %d\n", ft_isdigit('0'));
+    printf("space is --> %d\n", ft_isdigit(' '));
+    return (0);
+}*/

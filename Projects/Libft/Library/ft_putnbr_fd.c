@@ -21,19 +21,20 @@ void    ft_putnbr_fd(int n, int fd)
         write (fd, "-2147483648", 11);
         return;
     }
-    else if (n < 0)
+    if (n < 0)
     {
         write (fd, "-", 1);
         n = -n;
     }
-    else if(n >= 10)
+    if(n >= 10)
     {
-        ft_putnbr_fd(n / 10, fd);
-        ft_putnbr_fd(n % 10, fd);
+        ft_putnbr_fd((n / 10), fd);
     }
-    else
-    {
-        c = n + '0';
-        write (fd, &c, 1);
-    }
+    c = (n % 10) + '0';
+    write (fd, &c, 1);
 }
+/*int main()
+{
+    ft_putnbr_fd(-357, 1);
+    return (0);
+}*/

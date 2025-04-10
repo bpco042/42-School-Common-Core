@@ -20,3 +20,13 @@ int ft_isalnum(int n)
     else
         return (0);
 }
+/*
+int main(void)
+{
+    printf("p is --> %d\n", ft_isalnum('p'));
+    printf("P is --> %d\n", ft_isalnum('P'));
+    printf("9 is --> %d\n", ft_isalnum('9'));
+    printf("space is --> %d\n", ft_isalnum(' '));
+    return (0);
+}
+*/

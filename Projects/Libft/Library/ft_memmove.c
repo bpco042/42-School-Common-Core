@@ -46,3 +46,15 @@ void    *ft_memmove(void *dest, const void *src, size_t len)
     }
     return (dest);
 }
+//Works similar to memcpy but deals with memory overlap
+/*int main()
+{
+    char    str[] = "Veritasium";
+    char    dest[6];
+
+    ft_memmove(dest, str, 5);
+    dest[5] = '\0';
+
+    printf("%s\n", dest);
+    return (0);
+}*/

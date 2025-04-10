@@ -16,3 +16,14 @@ void    ft_bzero(void *dest, size_t len)
 {
     ft_memset(dest, 0, len);
 }
+/*
+int main() {
+    char str[10] = "Hello1234";
+
+    printf("before %s\n", str);
+    ft_bzero(str, 5);
+    printf("after %s\n", str);
+
+    return 0;
+}
+*/

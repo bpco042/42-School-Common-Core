@@ -42,3 +42,13 @@ int ft_atoi(const char *str)
     }
     return (result * sign);
 }
+/*Converts string to integer
+int main()
+{
+    const char *c = "-2329";
+    int result;
+
+    result = ft_atoi(c);
+    printf("%d\n", result);
+}
+*/

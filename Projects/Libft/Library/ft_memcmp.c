@@ -26,3 +26,22 @@ int ft_memcmp(const void *ptr1, const void *ptr2, size_t n)
     }
     return (0);
 }
+/*int main()
+{
+    char    *str1 = "Veritasium";
+    char    *str2 = "Veritasium";
+    char    *str3 = "Veritaxium";
+
+    int result1 = ft_memcmp(str1, str2,ft_strlen(str1) + 1);
+    if (result1 == 0)
+        printf("They are equal\n");
+    else
+        printf("They are not equal\n");
+
+    int result2 = ft_memcmp(str2, str3, ft_strlen(str2) + 1);
+    if (result2 == 0)
+        printf("They are equal\n");
+    else
+        printf("They are not equal\n");
+    return (0);
+}*/

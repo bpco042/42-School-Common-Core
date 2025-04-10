@@ -26,3 +26,12 @@ void    *ft_memcpy(void *dest, const void *src, size_t len)
     }
     return (dest);
 }
+/*int main()
+{
+    char    dest[25];
+    char    *src = "Hello";
+
+    ft_memcpy(dest, src, ft_strlen(src) + 1);
+    printf("%s\n", dest);
+    return (0);
+}*/

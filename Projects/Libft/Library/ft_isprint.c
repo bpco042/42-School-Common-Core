@@ -18,3 +18,11 @@ int ft_isprint(int n)
     else
         return (0);
 }
+/*int main(void)
+{
+    printf("p is --> %d\n", ft_isprint('p'));
+    printf("P is --> %d\n", ft_isprint('P'));
+    printf("0 is --> %d\n", ft_isprint('0'));
+    printf("space is --> %d\n", ft_isprint(' '));
+    return (0);
+}*/

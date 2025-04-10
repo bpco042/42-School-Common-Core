@@ -22,3 +22,29 @@ t_list  *ft_lstlast(t_list *lst)
     }
     return (lst);
 }
+/*int main()
+{
+    t_list  *list;
+    t_list  *node1;
+    t_list  *node2;
+    t_list  *node3;
+
+    list = NULL;
+
+    //creating the nodes with some content
+    node1 = ft_lstnew(ft_strdup("First one"));
+    node2 = ft_lstnew(ft_strdup("Second one"));
+    node3 = ft_lstnew(ft_strdup("Third one"));
+
+    //linking the nodes
+    ft_lstadd_front(&list, node1);
+    ft_lstadd_front(&list, node2);
+    ft_lstadd_front(&list, node3);
+
+    //printing the last one
+    printf("%s\n", (char *)ft_lstlast(list)->content);
+
+    ft_lstclear(&list, free);
+
+    return (0);
+}*/

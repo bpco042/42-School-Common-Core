@@ -20,3 +20,10 @@ void    ft_putendl_fd(char *s, int fd)
         write (fd, &(*s++), 1);
     write (fd, "\n", 1);
 }
+/*//Outputs a str with a given file descriptor with a new line at the end
+int main()
+{
+    char    *s = "Hello";
+    ft_putendl_fd(s, 1);
+    return (0);
+}*/
