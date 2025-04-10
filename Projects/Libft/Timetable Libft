@@ -1,0 +1,16 @@
+## 🗓️ Cronograma atualizado com Makefile (até 16/04)
+
+| Dia     | Tarefas principais                                                   | Duração estimada | Status |
+|---------|----------------------------------------------------------------------|------------------|--------|
+| 10/04   | Finalizar `ft_itoa` + testes (`main.c`)                              | 2h               | Ok     |
+|         | `ft_strmapi` + `ft_striteri`                                         | 2h               |        |
+| 11/04   | `ft_putchar_fd`, `ft_putstr_fd`, `ft_putendl_fd`, `ft_putnbr_fd`    | 2h               |        |
+|         | Criação dos primeiros `main.c` de teste                              | 1h               |        |
+| 12/04   | Implementar `ft_split` com cuidado + testes                          | 3–4h             |        |
+|         | Validar tudo com `norminette` e `valgrind`                           | 1h               |        |
+| 13/04   | Criar e completar `main.c` para todas as funções obrigatórias        | 2h               |        |
+|         | Criar o `Makefile` completo (com bônus)                             | 1–2h             |      |
+| 14/04   | Início dos bônus: `ft_lstnew`, `ft_lstadd_front`, `ft_lstsize`       | 2h               |        |
+| 15/04   | `ft_lstlast`, `ft_lstadd_back`, `ft_lstdelone`, `ft_lstclear`        | 3h               |        |
+| 16/04   | `ft_lstiter`, `ft_lstmap` + testes das funções bônus                | 3h               |        |
+|         | Revisão final: `norminette`, `valgrind`, submissão no Git           | 1–2h             |        |
