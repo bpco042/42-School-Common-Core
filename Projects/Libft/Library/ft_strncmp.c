@@ -29,3 +29,13 @@ int ft_strncmp(const char *str_ref, const char *str_base, size_t n)
     }
     return (0);
 }
+/*//compares n chars of the passed two strs and returns the difference
+int main(void)
+{
+    char    *str = "Veritasium";
+    char    *str1 = "VeriTasium";
+
+    printf("Compareded strings: %s and %s\n", str, str1);
+    printf("Result: %d\n", ft_strncmp(str, str1, sizeof(str)));
+    return (0);
+}*/

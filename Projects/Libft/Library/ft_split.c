@@ -90,3 +90,23 @@ char    **ft_split(char const *s, char c)
     split_words[i] = 0;
     return (split_words);
 }
+/*//ft_split separades a block of str into various words delimited by a delimitator c
+int main ()
+{
+    char    *str = "Hello World 42";
+    char    c = " ";
+    char    **split = ft_split(str, c);
+    int i;
+        
+    printf("before split: %s\n", str);
+    while ()
+    printf("after split: %s\n");
+
+    for (int i = 0; split[i]; i++)
+    {
+        printf("  -%s\n", split[i]);
+        free(split[i]);
+    }
+    free(split[i]);
+    return (0);
+}*/

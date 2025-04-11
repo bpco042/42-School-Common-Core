@@ -27,3 +27,11 @@ char    *ft_strdup(const char *src)
 
     return (dup);
 }
+/*//creates a dinamic allocated duplicate
+int main(void)
+{
+    char    *ptr;
+
+    printf("The duplicate is: %s\n", ft_strdup("Veritasium"));
+    return (0);
+}*/

@@ -31,3 +31,17 @@ char    *ft_strmapi(char const *s, char (*f)(unsigned int, char))
     str[i] = '\0';
     return (str);
 }
+char   tolower_f(unsigned int i, char c)
+{
+    (void)i;
+    c = ft_tolower(c);
+    return (c);
+}
+//iterates through the str and applies the function f, returning a new str with allocated memory
+int main(void)
+{
+    char    *str = "VeRiTaSiUm";
+    printf("String before function: %s\n", str);
+    printf("String after function: %s\n", ft_strmapi(str, tolower_f));
+    return (0);
+}

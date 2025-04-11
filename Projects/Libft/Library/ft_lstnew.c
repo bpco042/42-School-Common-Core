@@ -24,3 +24,19 @@ t_list  *ft_lstnew(void *content)
 
     return (new);
 }
+/*//creates nodes to a list
+int main(void)
+{
+    t_list  *list;
+    t_list  *node1;
+
+    list = NULL;
+
+    node1 = ft_lstnew(ft_strdup("first node"));
+    printf("%s\n", (char *)node1->content);
+
+    free(node1->content);
+    free(node1);
+
+    return (0);
+}*/

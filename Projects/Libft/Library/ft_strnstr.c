@@ -35,3 +35,12 @@ char    *ft_strnstr(const char *src, const char *find, size_t n)
     }
     return (0);
 }
+/*//returns de first occurrence of find in the src.
+int main(void)
+{
+    char    *str = "Veritasium Science Channel";
+    char    *find = "Science";
+
+    printf("Result is: %s\n", ft_strnstr(str, find, ft_strlen(str)));
+    return (0);
+}*/

@@ -25,10 +25,10 @@ char    *ft_strtrim(char const *s1, char const *set)
     start = 0;
     end = ft_strlen(s1) - 1;
 
-    while (s1[start] && ft_strchr(s1[start], set))
+    while (s1[start] && ft_strchr(set, s1[start]))
         start++;
     
-    while (end >= start && ft_strchr(s1[end], set))
+    while (end >= start && ft_strchr(set, s1[end]))
         end--;
     
     if (end < start)
@@ -44,3 +44,14 @@ char    *ft_strtrim(char const *s1, char const *set)
     trimmed[end - start + 1] = '\0';
     return (trimmed);
 }
+/*//allocates memory and return a new str with the set chars removed from the end and the beginning
+int main(void)
+{
+    char    *str = "!!!!Veritasium!!!";
+    char    *ptr;
+
+    ptr = ft_strtrim(str, "!");
+    printf("Result: %s\n", ptr);
+    free(ptr);
+    return (0);
+}*/

@@ -9,8 +9,6 @@
 /*   Updated: 2025/04/08 11:35:41 by bruperei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-#include <string.h>  // Para comparar com a strlcat original
 #include "libft.h"
 
 size_t  ft_strlcat(char *dest, const char *src, size_t n)
@@ -33,4 +31,17 @@ size_t  ft_strlcat(char *dest, const char *src, size_t n)
     if (i + j < n)
         dest[i + j] = '\0';
     return (i + ft_strlen(src));
+}
+//don´t allocate memory and just allocate the str in the end of dest
+int main(void)
+{
+    char    str[] = "Veritasium";
+    char    dest[22] = "Science Channel ";
+    size_t size = sizeof(dest);
+    size_t  result;
+
+    result = ft_strlcat(dest, str, size);
+    printf("String%s\n", dest);
+    printf("Length:%zu", result); //"zu is the correct format to print size_t elements. It's more portable between system architetures"
+    return (0);
 }

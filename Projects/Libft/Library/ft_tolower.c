@@ -18,3 +18,10 @@ int ft_tolower(int n)
         return (n + 32);
     return (n);
 }
+/*int main(void)
+{
+    int i = 'A';
+    for (i; i <= 'Z'; i++)
+        printf("%c\n", ft_tolower(i));
+    return (0);
+}*/

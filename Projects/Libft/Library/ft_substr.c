@@ -19,7 +19,7 @@ char    *ft_substr(char const *s, unsigned int start, size_t len)
     char *substr;
 
     if (!s)
-        return (NULL);ates memory (usin
+        return (NULL);
 
     size = ft_strlen(s);
 
@@ -46,3 +46,19 @@ char    *ft_substr(char const *s, unsigned int start, size_t len)
 
     return (substr);    
 }
+/*//allocates memory to a substr and returns it from the int start til len
+int main(void)
+{
+    char    *str = "Veritasium";
+    char    *ptr;
+
+    printf("original str: %s\n", str);
+    ptr = ft_substr(str, 3, ft_strlen(str));
+    printf("substring: %s\n", ptr);
+    free(ptr);
+    printf("original str: %s\n", str);
+    ptr = ft_substr(str, 1, 8);
+    printf("substring: %s\n", ptr);
+    free(ptr);
+    return (0);
+}*/

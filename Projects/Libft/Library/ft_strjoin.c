@@ -35,3 +35,12 @@ char    *ft_strjoin(char const *s1, char const *s2)
 
     return (new_str);
 }
+/*//return a str that is result of a concatenation of s1 and s2
+int main(void)
+{
+    char    *str1 = "Veritasium ";
+    char    *str2 = "Science Channel";
+
+    printf("%s\n", ft_strjoin(str1, str2));
+    return (0);
+}*/

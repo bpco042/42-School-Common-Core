@@ -26,7 +26,7 @@ void    ft_lstiter(t_list *lst, void (*f)(void *))
         tmp = tmp->next;
     }
 }
-/*//creating a printing function for the content
+/*//a printing function for the content
 void    print_content(void *content)
 {
     printf("%s\n", (char *)content);

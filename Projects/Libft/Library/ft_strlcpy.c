@@ -33,3 +33,15 @@ size_t    ft_strlcpy(char *dest, const char *src, size_t n)
     }
     return (i);
 }
+/*int main(void)
+{
+    char    str[] = "Veritasium";
+    char    dest[20];
+    size_t  size = 5;
+    size_t  result;
+
+    result = ft_strlcpy(dest, str, size);
+    printf("String: %s\n", dest);
+    printf("Length: %zu\n", result);
+    return (0);
+}*/
