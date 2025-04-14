@@ -15,13 +15,17 @@
 void    ft_lstclear(t_list **lst, void(*del)(void *))
 {
     t_list  *tmp;
-
+    // if either lst or del is null, do nothing
     if (!lst || !del)
         return;
+    // loops through the list until all the nodes are deleted
     while(*lst)
     {
+        // save the pointer to the next node
         tmp = (*lst)->next;
+        // delete the current node using del
         ft_lstdelone((*lst), del);
+        // move to the next node
         *lst = tmp;
     }
 }
