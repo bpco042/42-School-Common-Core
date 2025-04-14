@@ -10,12 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
+//defining libft.h
 #define LIBFT_H
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
 
+//defining a standard node of the used lists
 typedef struct s_list
 {
     void    *content;
@@ -35,6 +37,8 @@ int ft_isprint(int n);
 int ft_strlen(const char *str);
 
 void    *ft_memset(void *dest, int ch, size_t len);
+
+void    *ft_memchr(const void *str, int c, size_t n);
 
 void    ft_bzero(void *dest, size_t len);
 
@@ -76,13 +80,13 @@ char    **ft_split(char const *s, char c);
 
 char    *ft_itoa(int n);
 
-char    *ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char    *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 void    ft_striteri(char *s, void (*f)(unsigned int, char*));
 
 void    ft_putchar_fd(char c, int fd);
 
-void    ft_putstr_fd(char *s. int fd);
+void    ft_putstr_fd(char *s, int fd);
 
 void    ft_putendl_fd(char *s, int fd);
 

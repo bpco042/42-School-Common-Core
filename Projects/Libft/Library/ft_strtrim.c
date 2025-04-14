@@ -44,8 +44,8 @@ char    *ft_strtrim(char const *s1, char const *set)
     trimmed[end - start + 1] = '\0';
     return (trimmed);
 }
-/*//allocates memory and return a new str with the set chars removed from the end and the beginning
-int main(void)
+//allocates memory and return a new str with the set removed from the end and the beginning
+/*int main(void)
 {
     char    *str = "!!!!Veritasium!!!";
     char    *ptr;

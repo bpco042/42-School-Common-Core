@@ -46,7 +46,7 @@ void    *ft_memmove(void *dest, const void *src, size_t len)
     }
     return (dest);
 }
-//Works similar to memcpy but deals with memory overlap
+//It works in a similar way to memcpy, but deals with memory overlap. If dest > src, it goes backwards; else it goes forward.
 /*int main()
 {
     char    str[] = "Veritasium";

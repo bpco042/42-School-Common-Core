@@ -27,3 +27,29 @@ int ft_lstsize(t_list *lst)
     }
     return (i);
 }
+//returns the size of a list
+/*int main (void)
+{
+    t_list  *list;
+    t_list  *node1;
+    t_list  *node2;
+    size_t  node_count;
+
+    node_count = 0;
+
+    list = NULL;
+
+    //creating node with some content
+    node1 =ft_lstnew(ft_strdup("First Node"));
+    node2 = ft_lstnew(ft_strdup("Second Node"));
+
+    //linking the nodes to the list
+    ft_lstadd_back(&list, node1);
+    ft_lstadd_back(&list, node2);
+
+    //counting the nodes
+    node_count = ft_lstsize(list);
+
+    printf("List size is: %zu\n", node_count);
+    return (0);
+}*/

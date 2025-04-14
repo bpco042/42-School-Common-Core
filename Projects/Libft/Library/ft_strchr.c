@@ -27,7 +27,7 @@ char    *ft_strchr(const char *str, int c)
         return ((char *)&str[i]);
     return (0);
 }
-/*//Finds the first occurrence of a char c in a str and return a pointer to the finding
+/*//Finds the first occurrence of an int c in a str and return a pointer to the finding
 int main(void)
 {
     char    *str = "Veritasium";
@@ -35,6 +35,6 @@ int main(void)
     int c = 'a';
 
     ptr = ft_strchr(str, c);
-    printf("The result after findind %c is: %s\n", c, ptr);
+    printf("The result after finding %c is: %s\n", c, ptr);
     return (0);
 }*/

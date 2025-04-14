@@ -14,7 +14,7 @@
 int ft_isalpha(int n)
 {
     if ((n >= 'a' && n <= 'z')
-    || n >= 'A' && n <= 'Z')
+        || (n >= 'A' && n <= 'Z'))
         return (1);
     else
         return (0);

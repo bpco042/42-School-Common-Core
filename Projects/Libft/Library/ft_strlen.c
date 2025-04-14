@@ -20,11 +20,11 @@ int ft_strlen(const char *str)
         len++;
     return (len);
 }
-int main(void)
+/*int main(void)
 {
     char    *str = "Veritasium";
     char    str2[] = "Cappele";
     printf("Total length str: %d\n", ft_strlen(str));
     printf("Total length str2: %d\n", ft_strlen(str2));
     return (0);
-}
+}*/

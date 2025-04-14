@@ -32,7 +32,7 @@ size_t  ft_strlcat(char *dest, const char *src, size_t n)
         dest[i + j] = '\0';
     return (i + ft_strlen(src));
 }
-//don´t allocate memory and just allocate the str in the end of dest
+/*//don´t allocate memory and just allocate the str in the end of dest with a delimitator of n size
 int main(void)
 {
     char    str[] = "Veritasium";
@@ -44,4 +44,4 @@ int main(void)
     printf("String%s\n", dest);
     printf("Length:%zu", result); //"zu is the correct format to print size_t elements. It's more portable between system architetures"
     return (0);
-}
+}*/

@@ -25,8 +25,8 @@ char    *ft_strrchr(const char *str, int c)
     }
     return (0);
 }
-/*//locates the last position of a char c in the str, returns a pointer to it's position
-int main(void)
+//locates the last position of a char c in the str, returns a pointer to it's position
+/*int main(void)
 {
     char    *str = "Veritasium";
     char    *ptr;

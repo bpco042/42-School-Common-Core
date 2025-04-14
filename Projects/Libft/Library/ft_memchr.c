@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bruperei <bruperei@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,35 +12,29 @@
 
 #include "libft.h"
 
-char    *ft_strjoin(char const *s1, char const *s2)
+void *ft_memchr(const void *str, int c, size_t n)
 {
-    char    *new_str;
-    int len_s1;
-    int len_s2;
+    size_t  i;
+    unsigned char   *s;
 
-    if (s1 == NULL || s2 == NULL)
-        return (NULL);
-    
-    len_s1 = ft_strlen(s1);
-    len_s2 = ft_strlen(s2);
-
-    new_str = malloc((len_s1 + len_s2 + 1) * sizeof(char));
-
-    if (!new_str)
-        return (NULL);
-    
-    ft_memcpy(new_str, s1, len_s1);
-    ft_memcpy(new_str + len_s1, s2, len_s2);
-    new_str[len_s1 + len_s2] = '\0';
-
-    return (new_str);
+    s = (unsigned char *)str;
+    i = 0;
+    while (i < n)
+    {
+        if (s[i] == (unsigned char)c)
+            return ((void *)&s[i]);
+        i++;
+    }
+    return (NULL);
 }
-/*//return a str that is result of a concatenation of s1 and s2. It differs from strcat because of memory allocation
-int main(void)
+//finds the first occurrence of c in n bytes of a str and return a poiter to the finding
+/*int main(void)
 {
-    char    *str1 = "Veritasium ";
-    char    *str2 = "Science Channel";
+    const char *str = "Veritasium";
+    char    *ptr;
+    int c = 'a';
 
-    printf("%s\n", ft_strjoin(str1, str2));
+    ptr = ft_memchr(str, c, ft_strlen(str));
+    printf("The result after finding %c is %s\n:", c, ptr);
     return (0);
 }*/

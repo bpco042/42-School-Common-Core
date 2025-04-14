@@ -46,8 +46,8 @@ char    *ft_substr(char const *s, unsigned int start, size_t len)
 
     return (substr);    
 }
-/*//allocates memory to a substr and returns it from the int start til len
-int main(void)
+//allocates memory to a substr and returns it from the int start til len
+/*int main(void)
 {
     char    *str = "Veritasium";
     char    *ptr;

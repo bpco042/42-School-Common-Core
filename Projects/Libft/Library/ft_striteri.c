@@ -25,8 +25,8 @@ void    ft_striteri(char *s, void(*f)(unsigned int, char*))
         i++;
     }
 }
-/*//applies a function f to each char of the passed str itereting through it
-void    tolower_f(unsigned i, char *c) //auxiliary function to apply into ft_striteri
+//applies a function f to each char of the passed str itereting through it
+/*void    tolower_f(unsigned i, char *c) //auxiliary function to apply into ft_striteri
 {
     (void)i;
     *c = ft_tolower(*c);
