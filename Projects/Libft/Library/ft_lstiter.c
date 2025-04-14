@@ -15,14 +15,17 @@
 void    ft_lstiter(t_list *lst, void (*f)(void *))
 {
     t_list *tmp;
-
+    // if the list is empty, do nothing
     if (!lst)
         return;
-
+    // saves the pointer to the head
     tmp = lst;
+    // loops through the list until the node points to null
     while (tmp)
     {
+        // apply f function to the current node
         f(tmp->content);
+        // move to the next node
         tmp = tmp->next;
     }
 }
