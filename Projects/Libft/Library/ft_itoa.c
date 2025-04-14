@@ -21,29 +21,34 @@ char    *ft_itoa(int n)
 
     len = 1;
     num = n;
+    // Set the sign if the nb is negative
     if(n < 0)
     {
         num = -num;
         len++;
     }
     temp = num;
+    // Count how many digits are needed
     while (temp >= 10)
     {
         temp = temp / 10;
         len++;
     }
+    // Allocates memory to receive the nb
     nb = malloc(sizeof(char) * (len + 1));
+    // Check if the allocation was successful
     if (!nb)
         return (NULL);
-    
+    // Set a null terminator in the final of the str
     nb[len] = '\0';
-
+    // if nb is zero, sets to zero
     if (n == 0)
         nb[0] = '0';
-
+    // if nb is negative, sets the sign in the first position
     if (n < 0)
         nb[0] = '-';
 
+    // while nb is greater than 0, loops through len to compose the final str
     while (num > 0)
     {
         nb[--len] = (num % 10) + '0';
@@ -52,7 +57,7 @@ char    *ft_itoa(int n)
     return (nb);
 
 }
-/*Converts int to a str
+/*Converts a int to str
 int main ()
 {
     int c = -25458;
