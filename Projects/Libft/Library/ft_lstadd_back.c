@@ -15,12 +15,14 @@
 void    ft_lstadd_back(t_list **lst, t_list *new)
 {
     t_list  *last;
-    
+    // if the list is empty, set the head to the new element
     if (!*lst)
         *lst = new;
     else
     {
+        // find the last element in the list
         last = ft_lstlast(*lst);
+        // link the new element to the end of the list
         last->next = new;
     }
 }
