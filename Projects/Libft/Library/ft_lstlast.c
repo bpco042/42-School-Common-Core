@@ -14,10 +14,13 @@
 
 t_list  *ft_lstlast(t_list *lst)
 {
+    // if the list is empty, do nothing
     if (!lst)
         return (NULL);
+    // Iterates through the list until the last node (the one that points to a next NULL)
     while (lst->next)
     {
+        // move the pointer
         lst = lst->next;
     }
     return (lst);
