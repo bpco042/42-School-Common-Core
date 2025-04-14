@@ -34,21 +34,21 @@ char    *ft_itoa(int n)
         temp = temp / 10;
         len++;
     }
-    // Allocates memory to receive the nb
+    // Allocates memory to receive the str
     nb = malloc(sizeof(char) * (len + 1));
     // Check if the allocation was successful
     if (!nb)
         return (NULL);
     // Set a null terminator in the final of the str
     nb[len] = '\0';
-    // if nb is zero, sets to zero
+    // handle zero explicitly
     if (n == 0)
         nb[0] = '0';
     // if nb is negative, sets the sign in the first position
     if (n < 0)
         nb[0] = '-';
 
-    // while nb is greater than 0, loops through len to compose the final str
+    // fill digits from the end to the beginning
     while (num > 0)
     {
         nb[--len] = (num % 10) + '0';
