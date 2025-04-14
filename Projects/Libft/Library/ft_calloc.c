@@ -15,13 +15,22 @@
 void    *ft_calloc(size_t count, size_t size)
 {
     void    *memory;
-
-    if (size != 0 && (count * size) / size != count)
+    
+    // Check for overflow: if size is not zero (to avoid division by zero)
+    // and (count * size) / size doesn't equal count, it means an overflow occurred    
+    if (size != 0 && ((count * size) / size) != count)
         return (NULL);
+    
+    // Allocate memory to hold the requested data
     memory = malloc(count * size);
+    
+    // Check if the allocation was successful
     if (!memory)
         return (NULL);
+    
+    //Set all allocated memory to zero
     ft_bzero(memory, (count * size));
+    // Returns a pointer to the allocated memory
     return (memory);    
 }
 /*Allocates memory and sets it's bytes to zero
