@@ -14,9 +14,12 @@
 
 void    ft_lstadd_front(t_list **lst, t_list *new)
 {
+    // if the list is empty or the new element is null, do nothing
     if (!lst || !new)
         return;
+    // point the next of the new code to the head of the list
     new->next = *lst;
+    //update the head of the list to be the new node
     *lst = new;
 }
 /*//adds new nodes in the beginning of the list
