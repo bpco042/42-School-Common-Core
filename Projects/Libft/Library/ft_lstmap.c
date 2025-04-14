@@ -36,10 +36,8 @@ t_list *ft_lstmap(t_list *lst, void*(*f)(void *), void (*del)(void *))
     }
     return (new_lst);
 }
-/*
 //iterates through a list and applies a f function, creating a new list with the result
-//printing function for the content
-void    print_content(void *content)
+/*void    print_content(void *content)//printing function for the content
 {
     printf("%s\n", (char *)content);
 }

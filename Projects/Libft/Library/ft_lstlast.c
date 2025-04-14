@@ -22,6 +22,7 @@ t_list  *ft_lstlast(t_list *lst)
     }
     return (lst);
 }
+//takes the last node of a list
 /*int main()
 {
     t_list  *list;

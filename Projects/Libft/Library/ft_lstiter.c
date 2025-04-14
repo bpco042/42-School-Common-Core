@@ -26,8 +26,8 @@ void    ft_lstiter(t_list *lst, void (*f)(void *))
         tmp = tmp->next;
     }
 }
-/*//a printing function for the content
-void    print_content(void *content)
+//iterates through a list and applies an f function to it's nodes
+/*void    print_content(void *content) //a printing function for the content
 {
     
     printf("%s\n", (char *)content);

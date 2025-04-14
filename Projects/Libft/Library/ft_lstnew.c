@@ -24,8 +24,8 @@ t_list  *ft_lstnew(void *content)
 
     return (new);
 }
-/*//creates nodes to a list
-int main(void)
+//creates nodes to a list
+/*int main(void)
 {
     t_list  *list;
     t_list  *node1;

@@ -24,8 +24,8 @@ void    *ft_memset(void *dest, int c, size_t len)
     }
     return (dest);
 }
-/*//Fill n number of bytes with an c value
-int main()
+//Fill n number of bytes with an c value
+/*int main()
 {
     char    str[50] = "Veritasium";
 
