@@ -19,19 +19,24 @@ t_list *ft_lstmap(t_list *lst, void*(*f)(void *), void (*del)(void *))
  
     new_lst = NULL;
     new_node = NULL;
-
+    // if 'f' or lst are null, do nothing
     if (!f || !lst)
         return (NULL);
-    
+    // iterates through the list until the end
     while (lst)
     {
+        // apply 'f' on the current lst content and creating a new node
         new_node = ft_lstnew(f(lst->content));
+        // check if the node was correctly created
         if (!new_node)
         {
+            // if it isn't correctly created, apply clear and return NULL
             ft_lstclear(&new_lst, del);
             return (NULL);
         }
+        // append the new node in the end of the new lst
         ft_lstadd_back(&new_lst, new_node);
+        // move to the next node
         lst = lst->next;
     }
     return (new_lst);
