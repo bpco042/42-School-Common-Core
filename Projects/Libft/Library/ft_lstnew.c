@@ -15,11 +15,14 @@
 t_list  *ft_lstnew(void *content)
 {
     t_list *new;
-
+    // allocate memory for the new node
     new = (t_list *)malloc(sizeof(t_list));
+    // check if it was successful
     if (!new)
         return (NULL);
+    // set the node's content
     new->content = content;
+    // initialize next pointer to NULL
     new->next = NULL;
 
     return (new);
