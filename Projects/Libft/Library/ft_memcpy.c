@@ -14,11 +14,14 @@
 
 void    *ft_memcpy(void *dest, const void *src, size_t len)
 {
+    // casting pointers so we can work byte-byte
     unsigned char *src_ptr = (unsigned char *)src;
     unsigned char *dest_ptr = (unsigned char *)dest;
 
+    // traverse while informed size is greater to zero
     while (len > 0)
     {
+        // make a copy of src to dest
         *dest_ptr = *src_ptr;
         src_ptr++;
         dest_ptr++;
