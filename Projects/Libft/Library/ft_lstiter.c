@@ -20,7 +20,7 @@ void    ft_lstiter(t_list *lst, void (*f)(void *))
         return;
     // saves the pointer to the head
     tmp = lst;
-    // loops through the list until the node points to null
+    // loops through the list until the end
     while (tmp)
     {
         // apply f function to the current node
