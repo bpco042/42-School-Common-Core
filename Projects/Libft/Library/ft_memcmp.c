@@ -14,15 +14,20 @@
 
 int ft_memcmp(const void *ptr1, const void *ptr2, size_t n)
 {
+    // casting so the comparison can be done byte-byte
     unsigned char *p1 = (unsigned char *)ptr1;
     unsigned char *p2 = (unsigned char *)ptr2;
 
-    while (n--)
+    // loops through the informed size
+    while (n > 0)
     {
+        // compare the pointers
         if (*p1 != *p2)
+            // if it's different, returns the difference
             return (*p1 - *p2);
         p1++;
         p2++;
+        n--;
     }
     return (0);
 }
