@@ -14,9 +14,12 @@
 
 void    ft_lstdelone(t_list *lst, void (*del)(void *))
 {
+    // if either lst or del is null, do nothing
     if (!lst || !del)
         return;
+    // apply del to lst content
     (*del)(lst->content);
+    // frees the memory to avoid any leak
     free(lst);
 }
 /*
