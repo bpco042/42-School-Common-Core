@@ -67,10 +67,7 @@ char    **ft_split(char const *s, char c)
 
     while (*s)
     {
-        while (*s == c)
-            s++;
-
-        if (*s != '\0')
+        if (*s != c)
         {
             split_words[i] = get_word(s, c);
             if (!split_words[i])
@@ -82,12 +79,15 @@ char    **ft_split(char const *s, char c)
             }
             i++;
 
+            // Pula a palavra recém-pega
             while (*s && *s != c)
                 s++;
         }
+        else
+            s++; // avança o separador
     }
-    
-    split_words[i] = 0;
+
+    split_words[i] = NULL;
     return (split_words);
 }
 /*//ft_split separades a block of str into various words delimited by a delimitator c
