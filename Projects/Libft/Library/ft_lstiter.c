@@ -12,27 +12,23 @@
 
 #include "libft.h"
 
-void    ft_lstiter(t_list *lst, void (*f)(void *))
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-    t_list *tmp;
-    // if the list is empty, do nothing
-    if (!lst)
-        return;
-    // saves the pointer to the head
-    tmp = lst;
-    // loops through the list until the end
-    while (tmp)
-    {
-        // apply f function to the current node
-        f(tmp->content);
-        // move to the next node
-        tmp = tmp->next;
-    }
+	t_list	*tmp;
+
+	if (!lst)
+		return ;
+	tmp = lst;
+	while (tmp)
+	{
+		f(tmp->content);
+		tmp = tmp->next;
+	}
 }
-//iterates through a list and applies an f function to it's nodes
+// iterates through a list and applies an f function to it's nodes
 /*void    print_content(void *content) //a printing function for the content
 {
-    
+
     printf("%s\n", (char *)content);
 }
 int main()

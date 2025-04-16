@@ -11,19 +11,19 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-int ft_isalpha(int n)
+int	ft_isalpha(int n)
 {
-    if ((n >= 'a' && n <= 'z')
-        || (n >= 'A' && n <= 'Z'))
-        return (1);
-    else
-        return (0);
+	if ((n >= 'a' && n <= 'z')
+		|| (n >= 'A' && n <= 'Z'))
+		return (1);
+	else
+		return (0);
 }
 /*int main (void)
 {
     printf("p is --> %d\n", ft_isalpha('p'));
     printf("P is --> %d\n", ft_isalpha('P'));
-    printf("8 is -- > %d\n", ft_isalpha('2'));
+    printf("8 is -- > %d\n", ft_isalpha('8'));
     printf("space is --> %d\n", ft_isalpha(' '));
     return (0);
 }*/

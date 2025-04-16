@@ -12,15 +12,15 @@
 
 #include "libft.h"
 
-void    ft_putendl_fd(char *s, int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
-    if (!s)
-        return;
-    while (*s)
-        write (fd, &(*s++), 1);
-    write (fd, "\n", 1);
+	if (!s)
+		return ;
+	while (*s)
+		write(fd, &(*s++), 1);
+	write(fd, "\n", 1);
 }
-//Outputs a str with a given file descriptor with a new line at the end
+// Outputs a str with a given file descriptor with a new line at the end
 /*int main()
 {
     char    *s = "Hello";

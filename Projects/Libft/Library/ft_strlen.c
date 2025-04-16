@@ -11,14 +11,14 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-int ft_strlen(const char *str)
+int	ft_strlen(const char *str)
 {
-    int len;
+	int	len;
 
-    len = 0;
-    while (str[len])
-        len++;
-    return (len);
+	len = 0;
+	while (str[len])
+		len++;
+	return (len);
 }
 /*int main(void)
 {

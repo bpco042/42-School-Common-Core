@@ -11,12 +11,12 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-int ft_isprint(int n)
+int	ft_isprint(int n)
 {
-    if (n >= 32 && n <= 126)
-        return (1);
-    else
-        return (0);
+	if (n >= 32 && n <= 126)
+		return (1);
+	else
+		return (0);
 }
 /*int main(void)
 {

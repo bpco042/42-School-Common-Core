@@ -12,21 +12,21 @@
 
 #include "libft.h"
 
-void    ft_striteri(char *s, void(*f)(unsigned int, char*))
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-    unsigned int    i;
+	unsigned int	i;
 
-    i = 0;
-    if (!s)
-        return;
-    while (s[i])
-    {
-        f(i, &s[i]);
-        i++;
-    }
+	i = 0;
+	if (!s)
+		return ;
+	while (s[i])
+	{
+		f(i, &s[i]);
+		i++;
+	}
 }
-//applies a function f to each char of the passed str itereting through it
-/*void    tolower_f(unsigned i, char *c) //auxiliary function to apply into ft_striteri
+// apply a function to each char of the str
+/*void    tolower_f(unsigned i, char *c)
 {
     (void)i;
     *c = ft_tolower(*c);

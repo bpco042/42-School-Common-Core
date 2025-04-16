@@ -12,30 +12,23 @@
 
 #include "libft.h"
 
-t_list  *ft_lstnew(void *content)
+t_list	*ft_lstnew(void *content)
 {
-    t_list *new;
-    // allocate memory for the new node
-    new = (t_list *)malloc(sizeof(t_list));
-    // check if it was successful
-    if (!new)
-        return (NULL);
-    // set the node's content
-    new->content = content;
-    // initialize next pointer to NULL
-    new->next = NULL;
+	t_list	*new;
 
-    return (new);
+	new = (t_list *)malloc(sizeof(t_list));
+	if (!new)
+		return (NULL);
+	new->content = content;
+	new->next = NULL;
+	return (new);
 }
-//creates nodes to a list
+// creates nodes to a list
 /*int main(void)
 {
-    t_list  *list;
-    t_list  *node1;
+     t_list  *node1;
 
-    list = NULL;
-
-    node1 = ft_lstnew(ft_strdup("first node"));
+    node1 = ft_lstnew(ft_strdup("hi I'm a node"));
     printf("%s\n", (char *)node1->content);
 
     free(node1->content);

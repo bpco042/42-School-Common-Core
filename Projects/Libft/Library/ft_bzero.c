@@ -12,12 +12,10 @@
 
 #include "libft.h"
 
-void    ft_bzero(void *dest, size_t len)
+void	ft_bzero(void *dest, size_t len)
 {
-    //#uses memset to make the zerofication of the positions
-    ft_memset(dest, 0, len);
+	ft_memset(dest, 0, len);
 }
-//sets n number of positions into zero
 /*int main() {
     char str[10] = "Hello1234";
 
@@ -26,5 +24,4 @@ void    ft_bzero(void *dest, size_t len)
     printf("after %s\n", str);
 
     return 0;
-}
-*/
+}*/

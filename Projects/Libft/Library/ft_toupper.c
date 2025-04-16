@@ -11,16 +11,15 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-int ft_toupper(int n)
+int	ft_toupper(int n)
 {
-    if (n >= 'a' && n <= 'z')
-        return (n - 32);
-    return (n);
+	if (n >= 'a' && n <= 'z')
+		return (n - 32);
+	return (n);
 }
 /*int main(void)
 {
-    int i = 'a';
-    for (i; i <= 'z'; i++)
-        printf("%c ", ft_toupper(i));
+    for (char i = 'a'; i <= 'z'; i++)
+	printf("%c ", ft_toupper(i));
     return (0);
 }*/

@@ -12,18 +12,15 @@
 
 #include "libft.h"
 
-void    ft_lstadd_front(t_list **lst, t_list *new)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-    // if the list is empty or the new element is null, do nothing
-    if (!lst || !new)
-        return;
-    // point the next of the new code to the head of the list
-    new->next = *lst;
-    //update the head of the list to be the new node
-    *lst = new;
+	if (!lst || !new)
+		return ;
+	new->next = *lst;
+	*lst = new;
 }
-/*//adds new nodes in the beginning of the list
-int main()
+// adds new nodes in the beginning of the list
+/*int main()
 {
     t_list  *list;
     t_list *node_1;
@@ -42,8 +39,16 @@ int main()
     tmp = list;
     while (tmp)
     {
-        printf("%s\n", (char *)tmp->content);
-        tmp = tmp->next;//move to the next node
+	printf("%s\n", (char *)tmp->content);
+	tmp = tmp->next;//move to the next node
+    }
+    tmp = list;
+    while (tmp)
+    {
+	t_list *next = tmp->next;
+	free(tmp->content);
+	free(tmp);
+	tmp = next;
     }
     return (0);
 }*/

@@ -12,32 +12,29 @@
 
 #include "libft.h"
 
-char    *ft_strnstr(const char *src, const char *find, size_t n)
+char	*ft_strnstr(const char *src, const char *find, size_t n)
 {
-    size_t i;
-    size_t j;
+	size_t	i;
+	size_t	j;
 
-    if (*find == '\0')
-        return ((char *)src);
-    
-    i = 0;    
-    while (src[i] && i < n)
-    {
-        j = 0;
-        while (src[i + j] == find[j] && (i + j) < n)
-        {
-            j++;
-        
-            if (find[j] == '\0')
-                return ((char *)(src + i));
-        }
-        i++;
-    }
-    return (0);
+	if (*find == '\0')
+		return ((char *)src);
+	i = 0;
+	while (src[i] && i < n)
+	{
+		j = 0;
+		while (src[i + j] == find[j] && (i + j) < n)
+		{
+			j++;
+			if (find[j] == '\0')
+				return ((char *)(src + i));
+		}
+		i++;
+	}
+	return (0);
 }
-//returns de first occurrence of find in the src.
-/*
-int main(void)
+// returns de first occurrence of find str in the src.
+/*int main(void)
 {
     char    *str = "Veritasium Science Channel";
     char    *find = "Science";

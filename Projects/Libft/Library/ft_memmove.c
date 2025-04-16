@@ -11,51 +11,57 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-void    *ft_memmove(void *dest, const void *src, size_t len)
+void	*ft_memmove(void *dest, const void *src, size_t len)
 {
-    size_t i;
-    unsigned char *d;
-    const unsigned char *s;
-    // check if dest and src are null
-    if (!dest || !src)
-        return (NULL);
-    // casting to it's possible to work byte-byte
-    d = (unsigned char *)dest;
-    s = (unsigned char *)src;
-    // base case: if it's equal, return dest
-    if (d == s)
-        return (dest);
-    // if dest is greater than src, copy from the end to avoid overlap
-    if (d > s)
-    {
-        i = len;
-        while (i > 0)
-        {
-            i--;
-            d[i] = s[i];
-        }
-    }
-    else
-    {
-        i = 0;
-        // otherwise, copy from the beginning
-        while (i < len)
-        {
-            d[i] = s[i];
-            i++;
-        }
-    }
-    return (dest);
+	size_t	i;
+
+	if (!dest && !src)
+		return (NULL);
+	if (dest > src)
+	{
+		i = len;
+		while (i > 0)
+		{
+			i--;
+			((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
+		}
+	}
+	else
+	{
+		i = 0;
+		while (i < len)
+		{
+			((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
+			i++;
+		}
+	}
+	return (dest);
 }
-//It works in a similar way to memcpy, but deals with memory overlap. If dest > src, it goes backwards; else it goes forward.
-/*int main()
+// Seems memcpy but deals with memory overlap.
+/*int main(void)
 {
-    char    str[] = "Veritasium";
-    char    dest[6];
+    char buffer1[20] = "Hello, World!";
+    ft_memmove(buffer1 + 7, buffer1, 5);
+    printf("Test 1 (overlap): %s\n", buffer1);
 
-    ft_memmove(dest, str, 5);
-    dest[5] = '\0';
+    char buffer2[20] = "Hello, World!";
+    ft_memmove(buffer2 + 7, buffer2 + 7, 6);
+    printf("Test 2 (no overlap): %s\n", buffer2);
 
-    printf("%s\n", dest);
-    return (0);
+    char buffer3[50] = "This is a much larger buffer for testing memmove!";
+    ft_memmove(buffer3 + 10, buffer3, 10);
+    printf("Test 3 (large buffer): %s\n", buffer3);
+
+    char buffer4[20] = "Move to start!";
+    ft_memmove(buffer4, buffer4 + 5, 10);
+    printf("Test 4 (move to start): %s\n", buffer4);
+
+    char buffer5[20] = "Empty source";
+    ft_memmove(buffer5, "", 0);
+    printf("Test 5 (empty source): %s\n", buffer5);
+
+    char buffer6[20] = "No change!";
+    ft_memmove(buffer6, buffer6, 10);
+    printf("Test 6 (same source and destination): %s\n", buffer6);
+    return 0;
 }*/

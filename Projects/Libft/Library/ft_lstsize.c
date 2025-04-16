@@ -9,28 +9,23 @@
 /*   Updated: 2025/04/09 13:35:41 by bruperei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "libft.h"
 
-int ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    // if lst is empty, return 0
-    if (!lst)
-        return (0);
-    // loops through the lst until the end
-    while(lst)
-    {
-        // count nodes
-        i++;
-        // move the pointer to the next node
-        lst = lst->next;
-    }
-    return (i);
+	i = 0;
+	if (!lst)
+		return (0);
+	while (lst)
+	{
+		i++;
+		lst = lst->next;
+	}
+	return (i);
 }
-//returns the size of a list
+// returns the size of a list
 /*int main (void)
 {
     t_list  *list;

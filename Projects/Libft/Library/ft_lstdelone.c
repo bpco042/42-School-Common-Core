@@ -12,39 +12,29 @@
 
 #include "libft.h"
 
-void    ft_lstdelone(t_list *lst, void (*del)(void *))
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-    // if either lst or del is null, do nothing
-    if (!lst || !del)
-        return;
-    // apply del to lst content
-    (*del)(lst->content);
-    // frees the memory to avoid any leak
-    free(lst);
+	if (!lst || !del)
+		return ;
+	(*del)(lst->content);
+	free(lst);
 }
-/*
-//creating a printing function for the list
-void    print_list(t_list *lst)
+// creating a printing function for the list
+/*void    print_list(t_list *lst)
 {
     while (lst)
     {
-        printf("%s\n", (char *)lst->content);
-        lst = lst->next;
+	printf("%s\n", (char *)lst->content);
+	lst = lst->next;
     }
 }
-
-//creating a del function
-void    del(void *content)
-{
-    free(content);
-}
-
 //create two new nodes and clear the first one
 int main()
 {
     t_list  *list;
     t_list  *node_1;
     t_list  *node_2;
+    t_list  *tmp;
 
     list = NULL;
     //creating nodes with some content
@@ -52,18 +42,23 @@ int main()
     node_2 = ft_lstnew(ft_strdup("Second node"));
 
     //linking nodes
-    ft_lstadd_front(&list, node_1);
-    ft_lstadd_front(&list, node_2);
+    ft_lstadd_back(&list, node_1);
+    ft_lstadd_back(&list, node_2);
 
+    // points to list before deletion, saving reference to second node
+    tmp = list->next;
     //print content before deletion
     print_list(list);
 
-    ft_lstdelone(node_1, del);
+    // removing the first node
+    ft_lstdelone(node_1, free);
+
+    list = tmp;
 
     //print after deletion
     print_list(list);
 
-    ft_lstdelone(node_2, del);
+    ft_lstdelone(node_2, free);
 
     return (0);
 }*/

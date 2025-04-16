@@ -12,30 +12,21 @@
 
 #include "libft.h"
 
-void    ft_lstclear(t_list **lst, void(*del)(void *))
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-    t_list  *tmp;
-    // if either lst or del is null, do nothing
-    if (!lst || !del)
-        return;
-    // loops through the list until all the nodes are deleted
-    while(*lst)
-    {
-        // save the pointer to the next node
-        tmp = (*lst)->next;
-        // delete the current node using del
-        ft_lstdelone((*lst), del);
-        // move to the next node
-        *lst = tmp;
-    }
+	t_list	*tmp;
+
+	if (!lst || !del)
+		return ;
+	while (*lst)
+	{
+		tmp = (*lst)->next;
+		ft_lstdelone((*lst), del);
+		*lst = tmp;
+	}
 }
-/*//creat a del function
-void    del(void *content)
-{
-    free(content);
-}
-//adds new nodes in the beginning of the list and clear it all
-int main()
+// adds new nodes in the beginning of the list and clear it all
+/*int main()
 {
     t_list  *list;
     t_list *node_1;
@@ -54,15 +45,15 @@ int main()
     tmp = list;
     while (tmp)
     {
-        printf("%s\n", (char *)tmp->content);
-        tmp = tmp->next;//move to the next node
+	printf("%s\n", (char *)tmp->content);
+	tmp = tmp->next;//move to the next node
     }
     //clearing the list
-    ft_lstclear(&list, del);
+    ft_lstclear(&list, free);
     printf("List after clearing\n");
-        if(list == NULL)
-        {
-            printf("List is empty\n");
-        }
-        return (0);
+	if(list == NULL)
+	{
+	    printf("List is empty\n");
+	}
+	return (0);
 }*/

@@ -12,20 +12,20 @@
 
 #include "libft.h"
 
-char    *ft_strrchr(const char *str, int c)
+char	*ft_strrchr(const char *str, int c)
 {
-    int i;
+	int	i;
 
-    i = ft_strlen(str);
-    while (i >= 0)
-    {
-        if(str[i] == (unsigned char)c)
-            return ((char *)&str[i]);
-        i--;
-    }
-    return (0);
+	i = ft_strlen(str);
+	while (i >= 0)
+	{
+		if (str[i] == (unsigned char)c)
+			return ((char *)&str[i]);
+		i--;
+	}
+	return (0);
 }
-//locates the last position of a char c in the str, returns a pointer to it's position
+// locates the last position of a char c in the str
 /*int main(void)
 {
     char    *str = "Veritasium";
@@ -34,5 +34,6 @@ char    *ft_strrchr(const char *str, int c)
 
     ptr = ft_strrchr(str, c);
     printf("The result after findind %c is: %s\n", c, ptr);
+    printf("The result after seaching for x:%s\n", ft_strrchr(str, 'x'));
     return (0);
 }*/

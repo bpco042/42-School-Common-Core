@@ -12,33 +12,33 @@
 
 #include "libft.h"
 
-char    *ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-    unsigned int    i;
-    char    *str;
-    
-    if (!s)
-        return (NULL);
-    str = malloc(sizeof(char) * (ft_strlen(s) + 1));
-    if (!str)
-        return (NULL);
-    i = 0;
-    while(s[i])
-    {
-        str[i] = f(i, s[i]);
-        i++;
-    }
-    str[i] = '\0';
-    return (str);
+	char	*str;
+	int		i;
+
+	if (!s)
+		return (NULL);
+	str = malloc(sizeof(char) * (ft_strlen(s) + 1));
+	if (!str)
+		return (NULL);
+	i = 0;
+	while (s[i])
+	{
+		str[i] = f(i, s[i]);
+		i++;
+	}
+	str[i] = '\0';
+	return (str);
 }
-char   tolower_f(unsigned int i, char c)
+// auxiliary function 'f'
+/*char   tolower_f(unsigned int i, char c)
 {
     (void)i;
     c = ft_tolower(c);
     return (c);
 }
-//iterates through the str and applies the function f, returning a new str with allocated memory
-/*
+//iterates through the str and apply f, returning a new str
 int main(void)
 {
     char    *str = "VeRiTaSiUm";

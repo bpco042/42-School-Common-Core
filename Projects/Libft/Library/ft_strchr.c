@@ -12,23 +12,23 @@
 
 #include "libft.h"
 
-char    *ft_strchr(const char *str, int c)
+char	*ft_strchr(const char *str, int c)
 {
-    size_t i;
+	size_t	i;
 
-    i = 0;
-    while (str[i])
-    {
-        if (str[i] == (unsigned char)c)
-            return ((char *)&str[i]);
-        i++;
-    }
-    if (str[i] == (unsigned char)c)
-        return ((char *)&str[i]);
-    return (0);
+	i = 0;
+	while (str[i])
+	{
+		if (str[i] == (unsigned char)c)
+			return ((char *)&str[i]);
+		i++;
+	}
+	if (str[i] == (unsigned char)c)
+		return ((char *)&str[i]);
+	return (0);
 }
-/*//Finds the first occurrence of an int c in a str and return a pointer to the finding
-int main(void)
+// find the first occurence of c in str 
+/*int main(void)
 {
     char    *str = "Veritasium";
     char    *ptr;
@@ -36,5 +36,7 @@ int main(void)
 
     ptr = ft_strchr(str, c);
     printf("The result after finding %c is: %s\n", c, ptr);
+
+    printf("The result after searching for x is %s:\n", ft_strchr(str, 'x'));
     return (0);
 }*/

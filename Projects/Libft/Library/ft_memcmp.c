@@ -12,24 +12,21 @@
 
 #include "libft.h"
 
-int ft_memcmp(const void *ptr1, const void *ptr2, size_t n)
+int	ft_memcmp(const void *ptr1, const void *ptr2, size_t n)
 {
-    // casting so the comparison can be done byte-byte
-    unsigned char *p1 = (unsigned char *)ptr1;
-    unsigned char *p2 = (unsigned char *)ptr2;
+	unsigned char	*p1;
+	unsigned char	*p2;
 
-    // loops through the informed size
-    while (n > 0)
-    {
-        // compare the pointers
-        if (*p1 != *p2)
-            // if it's different, returns the difference
-            return (*p1 - *p2);
-        p1++;
-        p2++;
-        n--;
-    }
-    return (0);
+	p1 = (unsigned char *)ptr1;
+	p2 = (unsigned char *)ptr2;
+	while (n--)
+	{
+		if (*p1 != *p2)
+			return (*p1 - *p2);
+		p1++;
+		p2++;
+	}
+	return (0);
 }
 /*int main()
 {
@@ -38,15 +35,17 @@ int ft_memcmp(const void *ptr1, const void *ptr2, size_t n)
     char    *str3 = "Veritaxium";
 
     int result1 = ft_memcmp(str1, str2,ft_strlen(str1) + 1);
+    printf("%s and %s\n", str1, str2);
     if (result1 == 0)
-        printf("They are equal\n");
+	printf("They are equal\n");
     else
-        printf("They are not equal\n");
+	printf("They are not equal\n");
 
     int result2 = ft_memcmp(str2, str3, ft_strlen(str2) + 1);
+    printf("%s and %s\n", str2, str3);
     if (result2 == 0)
-        printf("They are equal\n");
+	printf("They are equal\n");
     else
-        printf("They are not equal\n");
+	printf("They are not equal\n");
     return (0);
 }*/

@@ -9,23 +9,19 @@
 /*   Updated: 2025/04/08 11:35:41 by bruperei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "libft.h"
 
-t_list  *ft_lstlast(t_list *lst)
+t_list	*ft_lstlast(t_list *lst)
 {
-    // if the list is empty, do nothing
-    if (!lst)
-        return;
-    // Iterates through the list until the last node (the one that points to a next NULL)
-    while (lst->next)
-    {
-        // move the pointer
-        lst = lst->next;
-    }
-    return (lst);
+	if (!lst)
+		return (NULL);
+	while (lst->next)
+	{
+		lst = lst->next;
+	}
+	return (lst);
 }
-//takes the last node of a list
+// takes the last node of a list
 /*int main()
 {
     t_list  *list;
@@ -38,12 +34,12 @@ t_list  *ft_lstlast(t_list *lst)
     //creating the nodes with some content
     node1 = ft_lstnew(ft_strdup("First one"));
     node2 = ft_lstnew(ft_strdup("Second one"));
-    node3 = ft_lstnew(ft_strdup("Third one"));
+    node3 = ft_lstnew(ft_strdup("Last one"));
 
     //linking the nodes
-    ft_lstadd_front(&list, node1);
-    ft_lstadd_front(&list, node2);
-    ft_lstadd_front(&list, node3);
+    ft_lstadd_back(&list, node1);
+    ft_lstadd_back(&list, node2);
+    ft_lstadd_back(&list, node3);
 
     //printing the last one
     printf("%s\n", (char *)ft_lstlast(list)->content);

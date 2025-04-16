@@ -12,22 +12,20 @@
 
 #include "libft.h"
 
-void    ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-    t_list  *last;
-    // if the list is empty, set the head to the new element
-    if (!*lst)
-        *lst = new;
-    else
-    {
-        // find the last element in the list
-        last = ft_lstlast(*lst);
-        // link the new element to the end of the list
-        last->next = new;
-    }
+	t_list	*last;
+
+	if (!*lst)
+		*lst = new;
+	else
+	{
+		last = ft_lstlast(*lst);
+		last->next = new;
+	}
 }
-/*//adds new nodes in the end of the list
-int main()
+// adds new nodes in the end of the list
+/*int main()
 {
     t_list  *list;
     t_list *node_1;
@@ -46,8 +44,16 @@ int main()
     tmp = list;
     while (tmp)
     {
-        printf("%s\n", (char *)tmp->content);
-        tmp = tmp->next;//move to the next node
+	printf("%s\n", (char *)tmp->content);
+	tmp = tmp->next;//move to the next node
+    }
+    tmp = list;
+    while (tmp)
+    {
+	t_list *next = tmp->next;
+	free(tmp->content);
+	free(tmp);
+	tmp = next;
     }
     return (0);
 }*/

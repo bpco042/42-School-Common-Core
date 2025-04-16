@@ -12,41 +12,35 @@
 
 #include "libft.h"
 
-char    *ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-    size_t size;
-    size_t n_len;
-    char *substr;
+	size_t	size;
+	size_t	n_len;
+	char	*substr;
 
-    if (!s)
-        return (NULL);
-
-    size = ft_strlen(s);
-
-    if (start >= size)
-    {
-        substr = malloc(1);
-        if (!substr)
-            return (NULL);
-        substr[0] = '\0';
-        return (substr);
-    }
-
-    if (start + len > size)
-        n_len = size - start;
-    else
-        n_len = len;
-    
-    substr = malloc(sizeof(char) * (n_len + 1));
-    if (!substr)
-        return (NULL);
-    
-    ft_memcpy(substr, s + start, n_len);
-    substr[n_len] = '\0';
-
-    return (substr);    
+	if (!s)
+		return (NULL);
+	size = ft_strlen(s);
+	if (start >= size)
+	{
+		substr = malloc(1);
+		if (!substr)
+			return (NULL);
+		substr[0] = '\0';
+		return (substr);
+	}
+	if (start + len > size)
+		n_len = size - start;
+	else
+		n_len = len;
+	substr = malloc(sizeof(char) * (n_len + 1));
+	if (!substr)
+		return (NULL);
+	ft_memcpy(substr, s + start, n_len);
+	substr[n_len] = '\0';
+	return (substr);
 }
-//allocates memory to a substr and returns it from the int start til len
+// allocates memory to a substr and returns it from the int start til len
 /*int main(void)
 {
     char    *str = "Veritasium";

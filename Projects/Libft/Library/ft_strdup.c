@@ -12,25 +12,21 @@
 
 #include "libft.h"
 
-char    *ft_strdup(const char *src)
+char	*ft_strdup(const char *src)
 {
-    size_t len;
-    char *dup;
+	size_t	len;
+	char	*dup;
 
-    len = ft_strlen(src) + 1;
-    dup = malloc(len);
-
-    if (!dup)
-        return (NULL);
-
-    ft_memcpy(dup, src, len);
-
-    return (dup);
+	len = ft_strlen(src) + 1;
+	dup = malloc(len);
+	if (!dup)
+		return (NULL);
+	ft_memcpy(dup, src, len);
+	return (dup);
 }
-/*//creates a dinamic allocated duplicate
-int main(void)
+// creates a dinamic allocated duplicate
+/*int main(void)
 {
-    char    *ptr;
 
     printf("The duplicate is: %s\n", ft_strdup("Veritasium"));
     return (0);
