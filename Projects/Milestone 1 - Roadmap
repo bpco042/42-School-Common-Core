@@ -28,6 +28,18 @@
 | 04/05        | Backup, push e documentação final                                     |
 
 ---
+### 📄 born2beroot – Roadmap (05/05 a 10/05)
+
+| Data         | Tarefa                                                                 |
+|--------------|------------------------------------------------------------------------|
+| 05/05        | Iniciar análise do projeto e estrutura básica                          |
+| 06/05        | Criar scripts de configuração e testes de inicialização                |
+| 07/05        | Testes de configuração e resolução de problemas do `born2beroot`       | 
+| 08/05        | Revisar documentação, comandos, scripts e preparar ambiente            |
+| 09/05        | Finalizar ajustes e revisar os detalhes de configuração                |
+| 10/05        | Backup, push e revisão final                                           |
+
+---
 
 ### 🚀 ft_printf – Roadmap detalhado (11/05 a 28/05)
 
@@ -45,13 +57,4 @@
 
 ---
 
-### 📄 born2beroot – Roadmap (05/05 a 10/05)
 
-| Data         | Tarefa                                                                 |
-|--------------|------------------------------------------------------------------------|
-| 05/05        | Iniciar análise do projeto e estrutura básica                          |
-| 06/05        | Criar scripts de configuração e testes de inicialização                |
-| 07/05        | Testes de configuração e resolução de problemas do `born2beroot`       | 
-| 08/05        | Revisar documentação, comandos, scripts e preparar ambiente            |
-| 09/05        | Finalizar ajustes e revisar os detalhes de configuração                |
-| 10/05        | Backup, push e revisão final                                           |
