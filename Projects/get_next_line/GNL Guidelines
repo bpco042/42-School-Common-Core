@@ -1,0 +1,69 @@
+# ✅ Step-by-Step Guide to Building `get_next_line`
+
+This guide outlines the logical steps to implement the `get_next_line` function required in the 42 project. No code is included—just the concepts and structure to help you figure it out on your own.
+
+---
+
+## 📌 1. Understand the Goal of the Function
+- The function should return **one line per call**.
+- The returned line must **include the newline character** (`\n`), if there is one.
+- When there is nothing left to read, it should return **`NULL`**.
+
+---
+
+## 🔄 2. Create an Incremental Reading Logic
+- The function should **read the file in small chunks**, using a fixed-size buffer.
+- Each chunk should be **accumulated** until a **full line** is found or the end of the file is reached.
+
+---
+
+## 📦 3. Keep Track of Unused Data
+- Reads may return **more than one line** or a **partial line**.
+- You must **store leftover data** (after the newline) for the next function call.
+- Use a **static variable** to preserve data between calls.
+
+---
+
+## 🔍 4. Detect When a Full Line Is Ready
+- Check if the accumulated data contains a **newline character**.
+- If found, **separate the complete line** from the rest.
+
+---
+
+## ✂️ 5. Extract the Line and Save the Remainder
+- Return the portion up to and including the newline.
+- Keep the remaining part to be processed in the next call.
+
+---
+
+## 📉 6. Handle End-of-File (EOF)
+- If no newline is found and the end of the file is reached, return **whatever is left**.
+- If there's **nothing left**, return `NULL`.
+
+---
+
+## ⚠️ 7. Handle Errors and Edge Cases
+- If `read()` fails, ensure proper **memory cleanup** and return `NULL`.
+- Consider corner cases, like **very small or very large buffer sizes**, or a `BUFFER_SIZE` of zero.
+
+---
+
+## 🧰 8. Create Helper Functions
+- Simplify your code by creating helper functions to:
+  - Join strings
+  - Find characters
+  - Duplicate or trim strings
+  - Measure lengths, etc.
+
+---
+
+## 🧪 9. Test with Multiple Scenarios
+- Test with:
+  - Files with many lines
+  - Files with no newline at the end
+  - Empty files
+  - Input from standard input (typing in the terminal)
+- Check behavior with different `BUFFER_SIZE` values (small, large, unusual)
+
+---
+
