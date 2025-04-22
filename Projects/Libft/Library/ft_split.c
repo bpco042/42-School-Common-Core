@@ -12,20 +12,6 @@
 
 #include "libft.h"
 
-static char	*ft_strcpy(char *dest, const char *src, char c)
-{
-	size_t	i;
-
-	i = 0;
-	while (src[i] && src[i] != c)
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = '\0';
-	return (dest);
-}
-
 static int	memsize(int i, const char *str, char c)
 {
 	size_t	len;
@@ -46,11 +32,13 @@ static int	count_words(const char *str, char c)
 
 	i = 0;
 	count = 0;
+	//base case: in case the str starts with the delimitator
 	if (str[i] && str[i] != c)
 	{
 		count++;
 		i++;
 	}
+	// while str doesn't end, verify if str[i] is not the delimitator and the previous position is the delimitator. It's used to check if it is inside a word
 	while (str[i] != '\0')
 	{
 		if (str[i] != c && str[i - 1] == c)
@@ -65,21 +53,30 @@ static int	ft_fill(char const *str, char c, char **result)
 	int	i;
 	int	j;
 
+	// index of the str
 	i = 0;
+	// index of the array
 	j = 0;
+	// loops until the end
 	while (str[i] != '\0')
 	{
+		// if the position is not the c char
 		if (str[i] != c)
 		{
+			// allocates memory to the array
 			result[j] = malloc(memsize(i, str, c) + 1);
+			// check if everything is fine
 			if (!result[j])
 			{
+				// if an erro occurs, free all
 				while (j-- > 0)
 					free(result[j]);
 				free(result);
 				return (1);
 			}
-			ft_strcpy(result[j], &str[i], c);
+			// if it's ok, apply strlcpy to each position of the array, so we fill it with the data
+			ft_strlcpy(result[j], &str[i], memsize(i, str, c) + 1);
+			// move i to the end of the current word
 			i = i + memsize(i, str, c);
 			j++;
 		}
