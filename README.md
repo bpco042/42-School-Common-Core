@@ -2,7 +2,7 @@
 
 | 🚀 Nível | 📂 Projeto            | 📝 Linguagem Principal    | 🏅 Nota | 📖 Descrição                                                                 |
 |:-------:|:---------------------:|:------------------------:|:------:|:---------------------------------------------------------------------------:|
-| 0️⃣     | 🔧 **libft**           | 🟦 C                    | 0️⃣     | Criação de uma biblioteca com funções básicas da linguagem C.               |
+| 0️⃣     | [🔧 **libft**](https://github.com/bpco042/42-School-Common-Core/tree/a466b42534f6edf89ee637957429f4110db22054/Projects/Libft)           | 🟦 C                    | 0️⃣     | Criação de uma biblioteca com funções básicas da linguagem C.               |
 | 1️⃣     | 🐧 **born2beroot**     | 🟦 Shell / Debian       | 0️⃣     | Criação de uma máquina virtual para hospedar um servidor Debian.            |
 | 1️⃣     | 🖨️ **ft_printf**       | 🟦 C                    | 0️⃣     | Reimplementação da função `printf` da biblioteca padrão do C.               |
 | 1️⃣     | 📜 **get_next_line**   | 🟦 C                    | 0️⃣     | Leitura de uma linha de um file descriptor, utilizada em loop.              |
