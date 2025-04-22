@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-int	count_digit(long n)
+static int	count_digit(long n)
 {
 	int	len;
 
