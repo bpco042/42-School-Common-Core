@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: bruperei <bruperei@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/04/14 12:10:03 by fcorvaro          #+#    #+#              #
-#    Updated: 2025/04/14 12:59:44 by fcorvaro         ###   ########.fr        #
+#    Created: 2025/04/14 12:10:03 by bruperei          #+#    #+#              #
+#    Updated: 2025/04/14 12:59:44 by bruperei         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,14 +34,9 @@ SRCS = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
 	ft_strncmp.c ft_strnstr.c ft_strrchr.c ft_strtrim.c ft_substr.c \
 	ft_tolower.c ft_toupper.c
 
-#Bonus sources
-SRCS_B = ft_lstadd_back.c ft_lstadd_front.c ft_lstclear.c ft_lstdelone.c \
-	ft_lstiter.c ft_lstlast.c ft_lstmap.c ft_lstnew.c ft_lstsize.c
-
 #Mandatory objects and bonuses
 #turns .c files to object files
 OBJS = ${SRCS:.c=.o}
-OBJS_B = ${SRCS_B:.c=.o}
 
 #Standard rule to compile .c files to .o not linking (-c) the files
 #$< - that part will be replaced by the file name (ex. ft_atoi.c) / ${<:.c=.o} - that one is the transformation of .c to .o
@@ -55,13 +50,9 @@ ${NAME}: ${OBJS}
 #Standard compiling
 all: ${NAME}
 
-#Compiling with bonus
-bonus: ${NAME} ${OBJS_B}
-	${AR} ${NAME} ${OBJS_B}
-
 #Clean objects
 clean:
-	${RM} ${OBJS} ${OBJS_B}
+	${RM} ${OBJS}
 
 #Clean objects and lib
 fclean: clean

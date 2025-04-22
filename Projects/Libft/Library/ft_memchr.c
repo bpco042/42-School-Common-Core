@@ -13,27 +13,27 @@
 
 void	*ft_memchr(const void *str, int c, size_t n)
 {
-	size_t	i;
-	char	*s;
+	size_t			i;
+	unsigned char	*s;
 
-	s = (char *)(unsigned char *)str;
 	i = 0;
+	s = (unsigned char *)str;
 	while (i < n)
 	{
 		if (s[i] == (unsigned char)c)
-			return ((void *)&s[i]);
+			return (s + i);
 		i++;
 	}
-	return (NULL);
+	return (0);
 }
-// finds the first occurrence of c in n bytes of a str
-/*int main(void)
-{
-    const char *str = "Veritasium";
-    char    *ptr;
-    int c = 'a';
+//finds the first occurrence of c in n bytes of a str
+// int main(void)
+// {
+//     const char *str = "Veritasium";
+//     char    *ptr;
+//     int c = 'a';
 
-    ptr = ft_memchr(str, c, ft_strlen(str));
-    printf("The result after finding %c is %s:\n", c, ptr);
-    return (0);
-}*/
+//     ptr = ft_memchr(str, c, ft_strlen(str));
+//     printf("The result after finding %c is %s:\n", c, ptr);
+//     return (0);
+// }
