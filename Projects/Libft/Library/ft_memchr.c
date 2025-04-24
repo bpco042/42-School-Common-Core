@@ -17,10 +17,14 @@ void	*ft_memchr(const void *str, int c, size_t n)
 	unsigned char	*s;
 
 	i = 0;
+	// cast the str so we can work through every byte
 	s = (unsigned char *)str;
+	// while position is greater than n, keep going
 	while (i < n)
 	{
+		//check if the s position is equal to c
 		if (s[i] == (unsigned char)c)
+			//return the position of the finding (start position of s + how much it moved i)
 			return (s + i);
 		i++;
 	}
