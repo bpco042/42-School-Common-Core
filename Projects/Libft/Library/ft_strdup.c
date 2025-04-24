@@ -17,10 +17,14 @@ char	*ft_strdup(const char *src)
 	size_t	len;
 	char	*dup;
 
+	//calculate the size of src to future memory allocation + 1
 	len = ft_strlen(src) + 1;
+	//allocate memory to the duplicate
 	dup = malloc(len);
+	//check if everything is fine
 	if (!dup)
 		return (NULL);
+	// copy src to dup until the len limitation (including \0)
 	ft_memcpy(dup, src, len);
 	return (dup);
 }
