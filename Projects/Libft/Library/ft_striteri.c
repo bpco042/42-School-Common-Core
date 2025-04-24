@@ -17,10 +17,13 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	unsigned int	i;
 
 	i = 0;
+	//base case check to avoid errors
 	if (!s)
 		return ;
+	//loops until s is valid
 	while (s[i])
 	{
+		//apply f function to each position of s
 		f(i, &s[i]);
 		i++;
 	}
