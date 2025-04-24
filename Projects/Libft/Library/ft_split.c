@@ -32,13 +32,16 @@ static int	count_words(const char *str, char c)
 
 	i = 0;
 	count = 0;
-	//base case: in case the str starts with the delimitator
+	// Special case: if the string starts with a character that is not the delimiter, it means we're already inside a word, so we count it.
 	if (str[i] && str[i] != c)
 	{
 		count++;
 		i++;
 	}
-	// while str doesn't end, verify if str[i] is not the delimitator and the previous position is the delimitator. It's used to check if it is inside a word
+	// Traverse the rest of the string.
+	// Each time we find a character that is not the delimiter
+	// and the previous character was the delimiter,
+	// it means a new word is starting, so we count it.
 	while (str[i] != '\0')
 	{
 		if (str[i] != c && str[i - 1] == c)
