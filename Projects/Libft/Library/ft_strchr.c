@@ -17,12 +17,16 @@ char	*ft_strchr(const char *str, int c)
 	size_t	i;
 
 	i = 0;
+	//loops through the str while it's valid
 	while (str[i])
 	{
+		//check if the str position is equal to c
 		if (str[i] == (unsigned char)c)
+			// returns a pointer to it's position
 			return ((char *)&str[i]);
 		i++;
 	}
+	//handle the case of the first str position being equal to c
 	if (str[i] == (unsigned char)c)
 		return ((char *)&str[i]);
 	return (0);
