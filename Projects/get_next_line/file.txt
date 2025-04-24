@@ -1,0 +1,19 @@
+A obra desenvolvida - abreviaremos aqui para o "Guia do Linux Desktop"
+- é um esforço pessoal em manter uma documentação forte, completa e
+atualizada, com o objetivo de facilitar a vida dos novos usuários na
+adoção de sistemas GNU/Linux em seus PCs, além de disponibilizar uma
+fonte de consulta para as dúvidas mais comuns.
+
+Novamente em destaque, a expansão do capítulo dedicado ao KDE, situado
+na 6a. Parte: Ambientes Gráficos: Desta vez, o antigo capítulo foi
+desfragmentado em 7 partes diferentes. Ainda nesta parte, o capítulo
+Aplicações nativas foi totalmente remodelado, recebendo não só
+informações gerais das aplicações nativas do ambiente que ainda não
+foram descritas, como também daquelas que estavam situadas na 7a.
+Parte: Aplicativos & Utilitários.
+
+[repeat]A obra desenvolvida - abreviaremos aqui para o "Guia do Linux Desktop"
+- é um esforço pessoal em manter uma documentação forte, completa e
+atualizada, com o objetivo de facilitar a vida dos novos usuários na
+adoção de sistemas GNU/Linux em seus PCs, além de disponibilizar uma
+fonte de consulta para as dúvidas mais comuns.
