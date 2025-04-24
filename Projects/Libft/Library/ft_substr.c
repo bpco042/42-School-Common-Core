@@ -17,18 +17,21 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	size;
 	size_t	n_len;
 	char	*substr;
-
+	//base case to avoid errors
 	if (!s)
 		return (NULL);
 	size = ft_strlen(s);
+	// check if there's room available to fit the substr
 	if (start >= size)
 	{
+		// there's no room to fit it, so allocate memory to \0
 		substr = malloc(1);
 		if (!substr)
 			return (NULL);
 		substr[0] = '\0';
 		return (substr);
 	}
+	// 
 	if (start + len > size)
 		n_len = size - start;
 	else
