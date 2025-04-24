@@ -16,19 +16,24 @@ char	*ft_strnstr(const char *src, const char *find, size_t n)
 {
 	size_t	i;
 	size_t	j;
-
+	//base case
 	if (*find == '\0')
 		return ((char *)src);
 	i = 0;
+	//loops while str is valid and index i > than size
 	while (src[i] && i < n)
 	{
+		//second variable to check the find
 		j = 0;
+		// loops through the actual position of str + index j and checks if the char of index j in find is equal. To secure the operation, limits it until index i and j are greater than size
 		while (src[i + j] == find[j] && (i + j) < n)
 		{
 			j++;
+			//if we reach the end of find, we found the complete str, so we return a pointer to it's beginning
 			if (find[j] == '\0')
 				return ((char *)(src + i));
 		}
+		//otherwise, move index i forward
 		i++;
 	}
 	return (0);
