@@ -16,18 +16,21 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char	*str;
 	int		i;
-
+	// check if s is valid
 	if (!s)
 		return (NULL);
+	//allocate memory to str variable
 	str = malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (!str)
 		return (NULL);
 	i = 0;
+	// traverse s and apply f function to each position of it, and fill it inside new variable str
 	while (s[i])
 	{
 		str[i] = f(i, s[i]);
 		i++;
 	}
+	// put terminator at the end
 	str[i] = '\0';
 	return (str);
 }
