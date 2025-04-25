@@ -21,10 +21,13 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t n)
 	i = 0;
 	while (src[i])
 		i++;
+	// cpy while n is greater than zero
 	if (n > 0)
 	{
+		// while j is less than size - 1 (last valid position) and src did not come to an end
 		while (j < (n - 1) && src[j])
 		{
+			
 			dest[j] = src[j];
 			j++;
 		}
