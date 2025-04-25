@@ -17,11 +17,13 @@ static int	count_digit(long n)
 	int	len;
 
 	len = 1;
+	// negative nb is changed to positive and we add one more len space to the sign
 	if (n < 0)
 	{
 		n = n * -1;
 		len++;
 	}
+	// while there's one more digit, break it dividing per 10 and increment the len 
 	while (n >= 10)
 	{
 		n = n / 10;
