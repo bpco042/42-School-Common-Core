@@ -14,18 +14,21 @@
 void	*ft_memmove(void *dest, const void *src, size_t len)
 {
 	size_t	i;
-
+	//check if any of these are invalid
 	if (!dest && !src)
 		return (NULL);
+	// if dest comes after src in memory
 	if (dest > src)
 	{
 		i = len;
+		// make cpy from the end to the beginning
 		while (i > 0)
 		{
 			i--;
 			((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
 		}
 	}
+	// otherwise (dest comes first), cpy from the beginning to the end
 	else
 	{
 		i = 0;
