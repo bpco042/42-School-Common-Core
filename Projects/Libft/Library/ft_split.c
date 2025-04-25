@@ -12,11 +12,13 @@
 
 #include "libft.h"
 
+//calculate the size of the word
 static int	memsize(int i, const char *str, char c)
 {
 	size_t	len;
 
 	len = 0;
+	//iterate while str is valid and the position is not equal to c
 	while (str[i] && str[i] != c)
 	{
 		len++;
@@ -24,7 +26,7 @@ static int	memsize(int i, const char *str, char c)
 	}
 	return (len);
 }
-
+//count how many separated words are inside the big str
 static int	count_words(const char *str, char c)
 {
 	int	i;
@@ -39,8 +41,7 @@ static int	count_words(const char *str, char c)
 		i++;
 	}
 	// Traverse the rest of the string.
-	// Each time we find a character that is not the delimiter
-	// and the previous character was the delimiter,
+	// Each time we find a character that is not the delimiter and the previous character was the delimiter,
 	// it means a new word is starting, so we count it.
 	while (str[i] != '\0')
 	{
@@ -93,15 +94,20 @@ char	**ft_split(char const *s, char c)
 {
 	int		len;
 	char	**result;
-
+	//check a valid input on s
 	if (!s)
 		return (NULL);
+	// use count_words to determine how much memory must be allocated
 	len = count_words(s, c);
+	//allocate memory
 	result = malloc((len + 1) * sizeof(char *));
+	//check allocation
 	if (!result)
 		return (NULL);
+	//calls ft_fill to fill the array with separated words
 	if (ft_fill(s, c, result))
 		return (NULL);
+	// put null to the last position of the array
 	result[len] = NULL;
 	return (result);
 }
