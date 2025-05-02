@@ -6,8 +6,8 @@ Este roadmap detalha passo a passo como implementar o projeto `ft_printf`, segui
 
 ## ✅ 1. Compreensão do Projeto
 
-- [ ] Ler atentamente o enunciado.
-- [ ] Entender que o objetivo é reimplementar `printf()` com suporte limitado.
+- [X] Ler atentamente o enunciado.
+- [X] Entender que o objetivo é reimplementar `printf()` com suporte limitado.
 - [ ] Identificar os tipos a serem implementados: `%c`, `%s`, `%p`, `%d`, `%i`, `%u`, `%x`, `%X`, `%%`.
 - [ ] Entender o uso das funções variádicas: `va_start`, `va_arg`, `va_end`.
 
