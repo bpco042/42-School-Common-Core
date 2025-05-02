@@ -86,10 +86,6 @@ Variadic functions allow functions to accept a variable number of arguments. In 
 
 A static library (.a) is a collection of precompiled object files linked into the program at compile time. This ensures that the `ft_printf` function can be reused across different projects while providing faster compilation times.
 
-### Makefile: Cross-Platform Compatibility
-
-The **Makefile** ensures the project can be built and executed across different operating systems (e.g., macOS and Ubuntu). It compiles only the necessary files and links the final executable correctly.
-
 ## Testing
 
 * To test the project, create a **main.c** file and verify the functionality with various format specifiers.
@@ -102,7 +98,7 @@ valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes -s ./a.out
 
 ## Evaluation
 
-* **Moulinette Feedback**: The project is evaluated using the Moulinette. Make sure to test your code on both macOS and Ubuntu, as results may differ between platforms.
+* **Moulinette Feedback**: The project is evaluated using the Moulinette.
 
 ## Developed Skills
 
