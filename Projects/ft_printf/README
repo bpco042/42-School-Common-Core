@@ -24,7 +24,7 @@ This roadmap outlines step-by-step how to implement the `ft_printf` project acco
 
 ## 📚 3. Study Variadic Functions
 
-- [ ] Learn how `va_list`, `va_start`, `va_arg`, and `va_end` work.
+- [x] Learn how `va_list`, `va_start`, `va_arg`, and `va_end` work.
 
 ---
 
