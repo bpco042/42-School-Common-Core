@@ -1,3 +1,124 @@
+# ft\_printf
+
+## Introduction
+
+The **ft\_printf** project is part of the 42 curriculum and involves implementing a custom version of the `printf` function in C. The goal is to create a custom library, **libftprintf.a**, that mimics the functionality of the original `printf` from the C standard library.
+
+## Overview
+
+In this project, students are required to handle a variety of format specifiers, such as `%c`, `%s`, `%d`, `%i`, `%u`, `%x`, `%X`, and `%%`, as well as flags and width options. They must also understand and use macros like `va_start`, `va_arg`, `va_copy`, and `va_end`.
+
+By completing this project, students gain a deeper understanding of string formatting and the internals of `printf`-like functions.
+
+## Project Requirements
+
+### Mandatory Part
+
+* The project must be written in **C**.
+* The code must follow the **Norm**.
+* The function should not crash unexpectedly (e.g., segmentation faults, bus errors, double frees, etc.), except for undefined behaviors.
+* All heap-allocated memory should be properly freed when necessary (no memory leaks).
+* The **Makefile** must compile the source files using `-Wall -Werror -Wextra` flags with the **cc** compiler, and it must not relink.
+* **libft** is allowed in this project, and its source code and the associated Makefile must be included in a `libft` folder.
+
+#### Project Specifications
+
+* You must implement the following format specifiers:
+
+| Format Specifier | Description                       |
+| ---------------- | --------------------------------- |
+| %c               | Single character                  |
+| %s               | String                            |
+| %p               | Pointer (printed in hexadecimal)  |
+| %d               | Decimal (base 10) number          |
+| %i               | Integer in base 10                |
+| %u               | Unsigned decimal (base 10) number |
+| %x               | Hexadecimal (lowercase)           |
+| %X               | Hexadecimal (uppercase)           |
+| %%               | Percent sign                      |
+
+* Your **libftprintf.a** library must be created at the root of your repository.
+* **Makefile rules**: `NAME`, `all`, `clean`, `fclean`, `re`.
+* Allowed external functions: `malloc`, `free`, `write`, `va_start`, `va_arg`, `va_copy`, `va_end`.
+
+#### ft\_printf Prototype:
+
+int ft_printf(const char *, ...);
+
+
+### Bonus Part (Optional)
+
+* Handle the following flags and width options:
+
+| Flag | Description                                              |
+| ---- | -------------------------------------------------------- |
+| `%0` | Prepends zeros for numeric types.                        |
+| `%-` | Left-aligns the output.                                  |
+| `%.` | Specifies precision for numeric types.                   |
+| `%#` | Adds special formatting (e.g., 0x for hex, 0 for octal). |
+| `%+` | Always shows the sign of the number.                     |
+| `% ` | Prepends a space for positive signed-numeric types.      |
+
+#### Theoretical Background
+
+### Understanding `printf` in C
+
+The `printf` function in C is widely used for displaying formatted output. It allows for various data types and formatting through format specifiers. Understanding how `printf` works helps in mastering formatted output and optimizing the display of data.
+
+### Flags and Width Modifiers
+
+The syntax for format specifiers is:
+
+```
+%[flags][width][.precision][length]specifier
+```
+
+* **Flags**: Modify the behavior of the conversion specifier (e.g., `-` for left alignment, `0` for zero-padding).
+* **Width**: Specifies the minimum field width.
+* **Precision**: Determines the number of digits for numeric types or the maximum length for strings.
+* **Length**: Specifies the length of the data type.
+
+### Variadic Functions
+
+Variadic functions allow functions to accept a variable number of arguments. In the case of `ft_printf`, they are used to handle different format specifiers dynamically.
+
+### Static Libraries
+
+A static library (.a) is a collection of precompiled object files linked into the program at compile time. This ensures that the `ft_printf` function can be reused across different projects while providing faster compilation times.
+
+### Makefile: Cross-Platform Compatibility
+
+The **Makefile** ensures the project can be built and executed across different operating systems (e.g., macOS and Ubuntu). It compiles only the necessary files and links the final executable correctly.
+
+## Testing
+
+* To test the project, create a **main.c** file and verify the functionality with various format specifiers.
+* The **printfTester** by Tripouille is used to compare the output of your `ft_printf` with the original `printf`.
+* To check for memory leaks, use **Valgrind**:
+
+```bash
+valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes -s ./a.out
+```
+
+## Evaluation
+
+* **Moulinette Feedback**: The project is evaluated using the Moulinette. Make sure to test your code on both macOS and Ubuntu, as results may differ between platforms.
+
+## Developed Skills
+
+* Implementation of variadic functions.
+* Handling of various flags and width modifiers.
+* Working with static libraries.
+* Cross-platform compatibility in Makefiles.
+
+## References
+
+* [Variadic Functions Documentation (IBM)](https://www.ibm.com/docs/en/zos/2.3.0?topic=functions-variadic)
+* [GeeksforGeeks: Variadic Functions](https://www.geeksforgeeks.org/variadic-functions-c/)
+* [GNU Make Manual](https://www.gnu.org/software/make/manual/make.html)
+
+------------------------------------------------------------------------------------------------------------------
+
 # 🚧 ft_printf - Implementation Roadmap
 
 This roadmap outlines step-by-step how to implement the `ft_printf` project according to the 42 School subject requirements.
