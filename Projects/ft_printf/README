@@ -1,0 +1,104 @@
+# 🚧 ft_printf - Roadmap de Implementação
+
+Este roadmap detalha passo a passo como implementar o projeto `ft_printf`, seguindo as instruções do enunciado da 42.
+
+---
+
+## ✅ 1. Compreensão do Projeto
+
+- [ ] Ler atentamente o enunciado.
+- [ ] Entender que o objetivo é reimplementar `printf()` com suporte limitado.
+- [ ] Identificar os tipos a serem implementados: `%c`, `%s`, `%p`, `%d`, `%i`, `%u`, `%x`, `%X`, `%%`.
+- [ ] Entender o uso das funções variádicas: `va_start`, `va_arg`, `va_end`.
+
+---
+
+## 🛠️ 2. Estrutura Inicial do Projeto
+
+- [ ] Criar os diretórios e arquivos necessários.
+- [ ] Adicionar sua `libft` (copiada, não como submodule).
+- [ ] Preparar os arquivos `.c` e `.h` iniciais.
+- [ ] Criar Makefile com as regras obrigatórias.
+
+---
+
+## 📚 3. Estudo de Funções Variádicas
+
+- [ ] Estudar e testar `va_list`, `va_start`, `va_arg`, `va_end`.
+- [ ] Fazer pequenos testes para entender como funciona a leitura de argumentos variáveis.
+
+---
+
+## 🧩 4. Planejamento dos Conversores
+
+- [ ] Criar um plano para tratar cada tipo individualmente:
+  - `%c` → caractere
+  - `%s` → string
+  - `%p` → ponteiro
+  - `%d` / `%i` → inteiros
+  - `%u` → unsigned
+  - `%x` / `%X` → hexadecimal
+  - `%%` → símbolo de porcentagem
+
+- [ ] Planejar funções internas auxiliares para cada tipo.
+- [ ] Decidir como será o roteamento para as funções internas.
+
+---
+
+## 🧪 5. Implementação do ft_printf
+
+- [ ] Criar função principal com parsing básico da string.
+- [ ] Implementar suporte a cada conversor, um por vez.
+- [ ] Testar após cada nova implementação.
+- [ ] Controlar o número total de caracteres impressos.
+
+---
+
+## 🔍 6. Tratamento de Erros e Memória
+
+- [ ] Garantir que não haja falhas como segmentation fault.
+- [ ] Verificar comportamento com strings/pointers nulos.
+- [ ] Usar `valgrind` para garantir ausência de memory leaks.
+- [ ] Cuidar de alocações temporárias (se houver).
+
+---
+
+## 🧾 7. Makefile
+
+- [ ] Adicionar regras obrigatórias: `NAME`, `all`, `clean`, `fclean`, `re`, `bonus`.
+- [ ] Garantir compilação da `libft` antes da `ft_printf`.
+- [ ] Evitar relinks desnecessários.
+
+---
+
+## 📊 8. Testes
+
+- [ ] Criar programa de testes com comparação entre `ft_printf` e `printf`.
+- [ ] Testar todos os conversores com inputs simples e casos limites.
+- [ ] Testar com argumentos nulos e inválidos.
+- [ ] Automatizar ou scriptar testes, se possível.
+
+---
+
+## 🌟 9. Parte Bônus (Opcional)
+
+⚠️ Só deve ser feita se a parte obrigatória estiver **100% correta**.
+
+- [ ] Implementar flags: `-`, `0`, `.`, largura mínima.
+- [ ] Implementar flags extras: `#`, `+`, espaço.
+- [ ] Adaptar o código principal para lidar com flags e combinações.
+
+---
+
+## 🚀 10. Finalização e Submissão
+
+- [ ] Verificar conformidade com a Norminette.
+- [ ] Garantir que todos os arquivos obrigatórios estão presentes.
+- [ ] Validar a ausência de warnings com os flags: `-Wall -Wextra -Werror`.
+- [ ] Confirmar que a biblioteca `libftprintf.a` é gerada corretamente.
+- [ ] Fazer push final para o repositório Git atribuído.
+
+---
+
+✅ Após finalização, você poderá integrar `ft_printf` à sua `libft` e usá-lo em futuros projetos da 42.
+
