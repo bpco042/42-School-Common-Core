@@ -1,101 +1,102 @@
-# 🚧 ft_printf - Roadmap de Implementação
+# 🚧 ft_printf - Implementation Roadmap
 
-Este roadmap detalha passo a passo como implementar o projeto `ft_printf`, seguindo as instruções do enunciado da 42.
-
----
-
-## ✅ 1. Compreensão do Projeto
-
-- [X] Ler atentamente o enunciado.
-- [X] Entender que o objetivo é reimplementar `printf()` com suporte limitado.
-- [ ] Identificar os tipos a serem implementados: `%c`, `%s`, `%p`, `%d`, `%i`, `%u`, `%x`, `%X`, `%%`.
-- [ ] Entender o uso das funções variádicas: `va_start`, `va_arg`, `va_end`.
+This roadmap outlines step-by-step how to implement the `ft_printf` project according to the 42 School subject requirements.
 
 ---
 
-## 🛠️ 2. Estrutura Inicial do Projeto
+## ✅ 1. Project Understanding
 
-- [ ] Criar os diretórios e arquivos necessários.
-- [ ] Adicionar sua `libft` (copiada, não como submodule).
-- [ ] Preparar os arquivos `.c` e `.h` iniciais.
-- [ ] Criar Makefile com as regras obrigatórias.
-
----
-
-## 📚 3. Estudo de Funções Variádicas
-
-- [ ] Estudar e testar `va_list`, `va_start`, `va_arg`, `va_end`.
-- [ ] Fazer pequenos testes para entender como funciona a leitura de argumentos variáveis.
+- [X] Carefully read the project subject.
+- [X] Understand that the goal is to reimplement `printf()` with limited format support.
+- [ ] Identify the supported format specifiers: `%c`, `%s`, `%p`, `%d`, `%i`, `%u`, `%x`, `%X`, `%%`.
+- [ ] Learn about variadic functions: `va_start`, `va_arg`, `va_end`.
 
 ---
 
-## 🧩 4. Planejamento dos Conversores
+## 🛠️ 2. Initial Project Setup
 
-- [ ] Criar um plano para tratar cada tipo individualmente:
-  - `%c` → caractere
+- [ ] Create necessary folders and files.
+- [ ] Add your `libft` (copied, not as a submodule).
+- [ ] Set up your initial `.c` and `.h` files.
+- [ ] Write a Makefile with all required rules.
+
+---
+
+## 📚 3. Study Variadic Functions
+
+- [ ] Learn how `va_list`, `va_start`, `va_arg`, and `va_end` work.
+- [ ] Write small test programs to practice using variadic arguments.
+
+---
+
+## 🧩 4. Conversion Planning
+
+- [ ] Create a plan to handle each format specifier:
+  - `%c` → character
   - `%s` → string
-  - `%p` → ponteiro
-  - `%d` / `%i` → inteiros
-  - `%u` → unsigned
+  - `%p` → pointer
+  - `%d` / `%i` → integers
+  - `%u` → unsigned integer
   - `%x` / `%X` → hexadecimal
-  - `%%` → símbolo de porcentagem
+  - `%%` → percent sign
 
-- [ ] Planejar funções internas auxiliares para cada tipo.
-- [ ] Decidir como será o roteamento para as funções internas.
-
----
-
-## 🧪 5. Implementação do ft_printf
-
-- [ ] Criar função principal com parsing básico da string.
-- [ ] Implementar suporte a cada conversor, um por vez.
-- [ ] Testar após cada nova implementação.
-- [ ] Controlar o número total de caracteres impressos.
+- [ ] Plan internal helper functions for each type.
+- [ ] Decide how to route format types to their handlers in `ft_printf`.
 
 ---
 
-## 🔍 6. Tratamento de Erros e Memória
+## 🧪 5. Implement `ft_printf`
 
-- [ ] Garantir que não haja falhas como segmentation fault.
-- [ ] Verificar comportamento com strings/pointers nulos.
-- [ ] Usar `valgrind` para garantir ausência de memory leaks.
-- [ ] Cuidar de alocações temporárias (se houver).
+- [ ] Start with basic string parsing in the main function.
+- [ ] Implement each conversion specifier, one at a time.
+- [ ] Test after each new specifier is added.
+- [ ] Keep track of the total number of characters printed.
+
+---
+
+## 🔍 6. Error Handling & Memory
+
+- [ ] Ensure no crashes (e.g., segmentation faults).
+- [ ] Handle null strings and null pointers gracefully.
+- [ ] Use `valgrind` to check for memory leaks.
+- [ ] Properly manage dynamically allocated memory (if used).
 
 ---
 
 ## 🧾 7. Makefile
 
-- [ ] Adicionar regras obrigatórias: `NAME`, `all`, `clean`, `fclean`, `re`, `bonus`.
-- [ ] Garantir compilação da `libft` antes da `ft_printf`.
-- [ ] Evitar relinks desnecessários.
+- [ ] Include required rules: `NAME`, `all`, `clean`, `fclean`, `re`, `bonus`.
+- [ ] Ensure `libft` compiles before `ft_printf`.
+- [ ] Avoid unnecessary relinking.
 
 ---
 
-## 📊 8. Testes
+## 📊 8. Testing
 
-- [ ] Criar programa de testes com comparação entre `ft_printf` e `printf`.
-- [ ] Testar todos os conversores com inputs simples e casos limites.
-- [ ] Testar com argumentos nulos e inválidos.
-- [ ] Automatizar ou scriptar testes, se possível.
-
----
-
-## 🌟 9. Parte Bônus (Opcional)
-
-⚠️ Só deve ser feita se a parte obrigatória estiver **100% correta**.
-
-- [ ] Implementar flags: `-`, `0`, `.`, largura mínima.
-- [ ] Implementar flags extras: `#`, `+`, espaço.
-- [ ] Adaptar o código principal para lidar com flags e combinações.
+- [ ] Create test programs to compare output from `ft_printf` and the real `printf`.
+- [ ] Test all supported format specifiers with basic and edge cases.
+- [ ] Include tests for null and invalid arguments.
+- [ ] Consider scripting or automating the testing process.
 
 ---
 
-## 🚀 10. Finalização e Submissão
+## 🌟 9. Bonus Part (Optional)
 
-- [ ] Verificar conformidade com a Norminette.
-- [ ] Garantir que todos os arquivos obrigatórios estão presentes.
-- [ ] Validar a ausência de warnings com os flags: `-Wall -Wextra -Werror`.
-- [ ] Confirmar que a biblioteca `libftprintf.a` é gerada corretamente.
-- [ ] Fazer push final para o repositório Git atribuído.
+⚠️ Only start this part if the mandatory portion is **fully functional and correct**.
+
+- [ ] Implement flags: `-`, `0`, `.`, and field width.
+- [ ] Implement additional flags: `#`, `+`, and space.
+- [ ] Adapt the main parser to support all flag combinations.
+
+---
+
+## 🚀 10. Final Checks & Submission
+
+- [ ] Ensure Norm compliance (Norminette).
+- [ ] Confirm that all required files are present and correctly named.
+- [ ] Make sure your code compiles with `-Wall -Wextra -Werror` and produces no warnings.
+- [ ] Verify that `libftprintf.a` is correctly created.
+- [ ] Push everything to your assigned Git repository.
+
 
 
