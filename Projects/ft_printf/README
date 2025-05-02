@@ -98,7 +98,4 @@ Este roadmap detalha passo a passo como implementar o projeto `ft_printf`, segui
 - [ ] Confirmar que a biblioteca `libftprintf.a` é gerada corretamente.
 - [ ] Fazer push final para o repositório Git atribuído.
 
----
-
-✅ Após finalização, você poderá integrar `ft_printf` à sua `libft` e usá-lo em futuros projetos da 42.
 
