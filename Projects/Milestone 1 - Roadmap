@@ -1,7 +1,3 @@
-Here's the translated version of your development schedule in English, formatted for inclusion in a GitHub repository:
-
----
-
 ## 📅 Development Timeline – Common Core (April 25th to June 6th)
 
 ### 🧩 Overview
@@ -9,9 +5,9 @@ Here's the translated version of your development schedule in English, formatted
 | Project           | Suggested Days | Estimated Dates  |
 | ----------------- | -------------- | ---------------- |
 | get\_next\_line   | 10 days        | April 25 – May 4 |
-| born2beroot       | 6 days         | May 5 – May 10   |
-| ft\_printf        | 18 days        | May 11 – May 28  |
-| Extra Buffer Time | 6 days         | May 29 – June 6  |
+| ft\_printf        | 18 days        | May 5 – May 24   |
+| born2beroot       | 6 days         | May 25 – May 31  |
+| Extra Buffer Time | 6 days         | June 1 – June 6  |
 
 ---
 
@@ -32,33 +28,33 @@ Here's the translated version of your development schedule in English, formatted
 
 ---
 
-### 📄 born2beroot – Roadmap (May 5 to May 10)
-
-| Date   | Task                                                    |
-| ------ | ------------------------------------------------------- |
-| May 5  | Project analysis and basic setup                        |
-| May 6  | Create configuration scripts and test initialization    |
-| May 7  | Test configurations and troubleshoot                    |
-| May 8  | Review documentation, commands, and prepare environment |
-| May 9  | Final adjustments and configuration review              |
-| May 10 | Backup, push to repository and final review             |
-
----
-
-### 🚀 ft\_printf – Detailed Roadmap (May 11 to May 28)
+### 🚀 ft\_printf – Detailed Roadmap (May 5 to May 24)
 
 | Date      | Task                                                 |
 | --------- | ---------------------------------------------------- |
-| May 11    | Create project structure, Makefile, and headers      |
-| May 12–15 | Implement `%c`, `%s`, and `%%`                       |
-| May 16–17 | Implement `%d` and `%i`                              |
-| May 18–19 | Implement `%u`, `%x`, `%X`                           |
-| May 20–21 | Implement `%p` using `uintptr_t` + testing           |
-| May 22–23 | Create and test the main `ft_printf` function        |
-| May 24–26 | Compare output with real `printf`, intensive testing |
-| May 27    | Review Makefile, norm compliance, and organization   |
-| May 28    | Backup, push to repository and final review          |
+| May 5     | Create project structure, Makefile, and headers      |
+| May 6–9   | Implement `%c`, `%s`, and `%%`                       |
+| May 10–11 | Implement `%d` and `%i`                              |
+| May 12–13 | Implement `%u`, `%x`, `%X`                           |
+| May 14–15 | Implement `%p` using `uintptr_t` + testing           |
+| May 16–17 | Create and test the main `ft_printf` function        |
+| May 18–21 | Compare output with real `printf`, intensive testing |
+| May 22    | Review Makefile, norm compliance, and organization   |
+| May 23    | Backup, push to repository and final review          |
+| May 24    | Buffer day for any final fixes or delays             |
 
 ---
 
-Would you like this exported as a Markdown file for your GitHub repo?
+### 📄 born2beroot – Roadmap (May 25 to May 31)
+
+| Date   | Task                                                    |
+| ------ | ------------------------------------------------------- |
+| May 25 | Project analysis and basic setup                        |
+| May 26 | Create configuration scripts and test initialization    |
+| May 27 | Test configurations and troubleshoot                    |
+| May 28 | Review documentation, commands, and prepare environment |
+| May 29 | Final adjustments and configuration review              |
+| May 30 | Backup, push to repository and final review             |
+| May 31 | Buffer day for any final fixes or delays                |
+
+---
