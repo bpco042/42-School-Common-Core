@@ -1,60 +1,64 @@
-## 📅 Cronograma de Desenvolvimento – Common Core (25/04 a 06/06)
-
-### 🧩 Visão Geral
-
-
-| Projeto            | Dias sugeridos | Data estimada        |
-|--------------------|----------------|----------------------|
-| get_next_line      | 10 dias        | 25/04 a 04/05        |
-| born2beroot        | 6 dias         | 05/05 a 10/05        |
-| ft_printf          | 18 dias        | 11/05 a 28/05        |
-| Buffer extra       | 6 dias         | 29/05 a 06/06        |
+Here's the translated version of your development schedule in English, formatted for inclusion in a GitHub repository:
 
 ---
 
-### 📄 get_next_line – Roadmap atualizado (25/04 a 04/05)
+## 📅 Development Timeline – Common Core (April 25th to June 6th)
 
-| Data         | Tarefa                                                                |
-|--------------|-----------------------------------------------------------------------|
-| 25/04        | Criar estrutura do projeto, Makefile, header e arquivos `.c`          |
-| 26/04        | Implementar lógica principal do `get_next_line`                       |
-| 27/04        | Implementar leitura com `read()`, uso do buffer e acúmulo de dados    |
-| 28/04        | Integrar chamadas de funções auxiliares já existentes (`libft`)       |
-| 29/04        | Implementar tratamento de múltiplos file descriptors (`fd`)           |
-| 30/04        | Testes básicos com arquivos simples e pequenos buffers                |
-| 01/05        | Testes avançados (linhas grandes, sem `\n`, múltiplos `fd`)           |
-| 02/05        | Validação com `Valgrind`, correção de memory leaks                    |
-| 03/05        | Revisar Makefile, normas, estrutura final                             |
-| 04/05        | Backup, push e documentação final                                     |
+### 🧩 Overview
 
----
-### 📄 born2beroot – Roadmap (05/05 a 10/05)
-
-| Data         | Tarefa                                                                 |
-|--------------|------------------------------------------------------------------------|
-| 05/05        | Iniciar análise do projeto e estrutura básica                          |
-| 06/05        | Criar scripts de configuração e testes de inicialização                |
-| 07/05        | Testes de configuração e resolução de problemas do `born2beroot`       | 
-| 08/05        | Revisar documentação, comandos, scripts e preparar ambiente            |
-| 09/05        | Finalizar ajustes e revisar os detalhes de configuração                |
-| 10/05        | Backup, push e revisão final                                           |
+| Project           | Suggested Days | Estimated Dates  |
+| ----------------- | -------------- | ---------------- |
+| get\_next\_line   | 10 days        | April 25 – May 4 |
+| born2beroot       | 6 days         | May 5 – May 10   |
+| ft\_printf        | 18 days        | May 11 – May 28  |
+| Extra Buffer Time | 6 days         | May 29 – June 6  |
 
 ---
 
-### 🚀 ft_printf – Roadmap detalhado (11/05 a 28/05)
+### 📄 get\_next\_line – Updated Roadmap (April 25 to May 4)
 
-| Data         | Tarefa                                                                 |
-|--------------|------------------------------------------------------------------------|
-| 11/05        | Criar estrutura do projeto, Makefile e headers                         |
-| 12–15/05     | Implementar `%c`, `%s` e `%%`                                          |
-| 16–17/05     | Implementar `%d` e `%i`                                                |
-| 18–19/05     | Implementar `%u`, `%x`, `%X`                                           |
-| 20–21/05     | Implementar `%p` com `uintptr_t` + testes                              |
-| 22–23/05     | Criar e testar a função `ft_printf` principal                          |
-| 24–26/05     | Comparar com `printf` real, testes intensivos                          |
-| 27/05        | Revisar Makefile, normas, organização                                  |
-| 28/05        | Backup, push e revisão final                                           |
+| Date     | Task                                                             |
+| -------- | ---------------------------------------------------------------- |
+| April 25 | Create project structure, Makefile, header and `.c` files        |
+| April 26 | Implement core logic of `get_next_line`                          |
+| April 27 | Implement reading with `read()`, buffering and data accumulation |
+| April 28 | Integrate helper functions from `libft`                          |
+| April 29 | Handle multiple file descriptors (`fd`)                          |
+| April 30 | Basic tests with small files and buffers                         |
+| May 1    | Advanced tests (large lines, no `\n`, multiple `fd`s)            |
+| May 2    | Valgrind check, fix memory leaks                                 |
+| May 3    | Review Makefile, norm compliance, final structure                |
+| May 4    | Backup, push to repository and finalize documentation            |
 
 ---
 
+### 📄 born2beroot – Roadmap (May 5 to May 10)
 
+| Date   | Task                                                    |
+| ------ | ------------------------------------------------------- |
+| May 5  | Project analysis and basic setup                        |
+| May 6  | Create configuration scripts and test initialization    |
+| May 7  | Test configurations and troubleshoot                    |
+| May 8  | Review documentation, commands, and prepare environment |
+| May 9  | Final adjustments and configuration review              |
+| May 10 | Backup, push to repository and final review             |
+
+---
+
+### 🚀 ft\_printf – Detailed Roadmap (May 11 to May 28)
+
+| Date      | Task                                                 |
+| --------- | ---------------------------------------------------- |
+| May 11    | Create project structure, Makefile, and headers      |
+| May 12–15 | Implement `%c`, `%s`, and `%%`                       |
+| May 16–17 | Implement `%d` and `%i`                              |
+| May 18–19 | Implement `%u`, `%x`, `%X`                           |
+| May 20–21 | Implement `%p` using `uintptr_t` + testing           |
+| May 22–23 | Create and test the main `ft_printf` function        |
+| May 24–26 | Compare output with real `printf`, intensive testing |
+| May 27    | Review Makefile, norm compliance, and organization   |
+| May 28    | Backup, push to repository and final review          |
+
+---
+
+Would you like this exported as a Markdown file for your GitHub repo?
