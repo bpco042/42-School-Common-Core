@@ -69,9 +69,8 @@ The `printf` function in C is widely used for displaying formatted output. It al
 
 The syntax for format specifiers is:
 
-```
 %[flags][width][.precision][length]specifier
-```
+
 
 * **Flags**: Modify the behavior of the conversion specifier (e.g., `-` for left alignment, `0` for zero-padding).
 * **Width**: Specifies the minimum field width.
@@ -92,9 +91,7 @@ A static library (.a) is a collection of precompiled object files linked into th
 * The **printfTester** by Tripouille is used to compare the output of your `ft_printf` with the original `printf`.
 * To check for memory leaks, use **Valgrind**:
 
-```bash
 valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes -s ./a.out
-```
 
 ## Evaluation
 
@@ -105,13 +102,6 @@ valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes -s ./a.out
 * Implementation of variadic functions.
 * Handling of various flags and width modifiers.
 * Working with static libraries.
-* Cross-platform compatibility in Makefiles.
-
-## References
-
-* [Variadic Functions Documentation (IBM)](https://www.ibm.com/docs/en/zos/2.3.0?topic=functions-variadic)
-* [GeeksforGeeks: Variadic Functions](https://www.geeksforgeeks.org/variadic-functions-c/)
-* [GNU Make Manual](https://www.gnu.org/software/make/manual/make.html)
 
 ------------------------------------------------------------------------------------------------------------------
 
