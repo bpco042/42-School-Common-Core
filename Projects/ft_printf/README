@@ -8,17 +8,17 @@ This roadmap outlines step-by-step how to implement the `ft_printf` project acco
 
 - [X] Carefully read the project subject.
 - [X] Understand that the goal is to reimplement `printf()` with limited format support.
-- [ ] Identify the supported format specifiers: `%c`, `%s`, `%p`, `%d`, `%i`, `%u`, `%x`, `%X`, `%%`.
-- [ ] Learn about variadic functions: `va_start`, `va_arg`, `va_end`.
+- [X] Identify the supported format specifiers: `%c`, `%s`, `%p`, `%d`, `%i`, `%u`, `%x`, `%X`, `%%`.
+- [X] Learn about variadic functions: `va_start`, `va_arg`, `va_end`.
 
 ---
 
 ## 🛠️ 2. Initial Project Setup
 
-- [ ] Create necessary folders and files.
-- [ ] Add your `libft` (copied, not as a submodule).
-- [ ] Set up your initial `.c` and `.h` files.
-- [ ] Write a Makefile with all required rules.
+- [x] Create necessary folders and files.
+- [x] Add your `libft` (copied, not as a submodule).
+- [x] Set up your initial `.c` and `.h` files.
+- [x] Write a Makefile with all required rules.
 
 ---
 
