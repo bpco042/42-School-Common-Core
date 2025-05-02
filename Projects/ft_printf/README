@@ -153,8 +153,8 @@ This roadmap outlines step-by-step how to implement the `ft_printf` project acco
 
 ## 🧪 5. Implement `ft_printf`
 
-- [ ] Start with basic string parsing in the main function.
-- [ ] Implement each conversion specifier, one at a time.
+- [X] Start with basic string parsing in the main function.
+- [X] Implement each conversion specifier, one at a time.
 - [ ] Test after each new specifier is added.
 - [x] Keep track of the total number of characters printed.
 
@@ -163,7 +163,7 @@ This roadmap outlines step-by-step how to implement the `ft_printf` project acco
 ## 🔍 6. Error Handling & Memory
 
 - [ ] Ensure no crashes (e.g., segmentation faults).
-- [x] Handle null strings and null pointers gracefully.
+- [x] Handle null strings and null pointers.
 - [ ] Use `valgrind` to check for memory leaks.
 - [ ] Properly manage dynamically allocated memory (if used).
 
