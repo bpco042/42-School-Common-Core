@@ -30,7 +30,7 @@ This roadmap outlines step-by-step how to implement the `ft_printf` project acco
 
 ## 🧩 4. Conversion Planning
 
-- [ ] Create a plan to handle each format specifier:
+- [x] Create a plan to handle each format specifier:
   - `%c` → character
   - `%s` → string
   - `%p` → pointer
@@ -39,8 +39,8 @@ This roadmap outlines step-by-step how to implement the `ft_printf` project acco
   - `%x` / `%X` → hexadecimal
   - `%%` → percent sign
 
-- [ ] Plan internal helper functions for each type.
-- [ ] Decide how to route format types to their handlers in `ft_printf`.
+- [x] Plan internal helper functions for each type.
+- [x] Decide how to route format types to their handlers in `ft_printf`.
 
 ---
 
@@ -49,14 +49,14 @@ This roadmap outlines step-by-step how to implement the `ft_printf` project acco
 - [ ] Start with basic string parsing in the main function.
 - [ ] Implement each conversion specifier, one at a time.
 - [ ] Test after each new specifier is added.
-- [ ] Keep track of the total number of characters printed.
+- [x] Keep track of the total number of characters printed.
 
 ---
 
 ## 🔍 6. Error Handling & Memory
 
 - [ ] Ensure no crashes (e.g., segmentation faults).
-- [ ] Handle null strings and null pointers gracefully.
+- [x] Handle null strings and null pointers gracefully.
 - [ ] Use `valgrind` to check for memory leaks.
 - [ ] Properly manage dynamically allocated memory (if used).
 
@@ -64,7 +64,7 @@ This roadmap outlines step-by-step how to implement the `ft_printf` project acco
 
 ## 🧾 7. Makefile
 
-- [ ] Include required rules: `NAME`, `all`, `clean`, `fclean`, `re`, `bonus`.
+- [x] Include required rules: `NAME`, `all`, `clean`, `fclean`, `re`, `bonus`.
 - [ ] Ensure `libft` compiles before `ft_printf`.
 - [ ] Avoid unnecessary relinking.
 
