@@ -21,8 +21,8 @@
 | April 28 | Integrate helper functions from `libft`                          |
 | April 29 | Handle multiple file descriptors (`fd`)                          |
 | April 30 | Basic tests with small files and buffers                         |
-| May 1    | Advanced tests (large lines, no `\n`, multiple `fd`s)            |
-| May 2    | Valgrind check, fix memory leaks                                 |
+| May 1    | Advanced tests (large lines, no `\n`, multiple `fd`s)            | COMPLETED (NOT DELIVERED)
+| May 2    | Valgrind check, fix memory leaks                                 | PRINTF STARTED
 | May 3    | Review Makefile, norm compliance, final structure                |
 | May 4    | Backup, push to repository and finalize documentation            |
 
