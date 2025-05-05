@@ -13,7 +13,7 @@
 
 char	*get_next_line(int fd)
 {
-	char	*rtn;
+	char		*rtn;
 	static char	*str;
 
 	if (BUFFER_SIZE <= 0 || fd < 0)
@@ -25,16 +25,8 @@ char	*get_next_line(int fd)
 	str = ft_rem_line(str);
 	return (rtn);
 }
-int	main(void)
-{
-	char	*s;
-	int	fd;
-	int	line_nb = 1;
-
-	fd = open("file.txt", O_RDONLY);
-	if (fd == -1)
-	{
-		perror("Error");
+/*int	main(void)
+{ão com `Valgrind`, c
 		return (1);
 	}
 	while (1)
@@ -48,4 +40,4 @@ int	main(void)
 	}
 	close(fd);
 	return (0);
-}
+}*/

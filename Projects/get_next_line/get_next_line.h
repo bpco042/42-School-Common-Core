@@ -9,9 +9,8 @@
 /*   Updated: 2025/04/23 15:47:34 by bruperei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #ifndef GET_NEXT_LINE_H
-#define GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
 
 /*
 1 - for printf and buffer_size
@@ -21,21 +20,20 @@
 5 - for ssize_t
 */
 
-#include <stdio.h>
-#include <stddef.h>
-#include <unistd.h>
-#include <fcntl.h>
-#include <stdlib.h>
-#include <sys/types.h>
+# include <stdio.h>
+# include <stddef.h>
+# include <unistd.h>
+# include <fcntl.h>
+# include <stdlib.h>
+# include <sys/types.h>
 
-#ifndef BUFFER_SIZE
-#define BUFFER_SIZE 100
-#endif
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 100
+# endif
 
 size_t	ft_len(char *str);
-char	*ft_strdup(char *str);
-char	*ft_strchr(char *str, int c);
-char	*ft_strjoin(char *str1, char *str2);
+char	*ft_strjoin_dup(char *str1, char *str2);
+size_t	ft_strchr_len(char *str, int c);
 char	*ft_line_allocation(int fd, char *str);
 char	*ft_next_line(char *str);
 char	*ft_rem_line(char *line);
