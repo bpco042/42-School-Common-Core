@@ -12,106 +12,109 @@
 
 #include "get_next_line.h"
 
-/* to find char c into str.
-It's used to find \n in the line to read */
-size_t	ft_strchr_len(char *str, int c)
+/*to find char c into str. This function returns a pointer to the first
+occurrence of a character in a string, or NULL if the character is not found.
+Used to find '\n' in the line to read.*/
+
+char	*ft_strchr(char *str, int c)
 {
 	size_t	i;
 
 	i = 0;
 	if (!str)
 		return (0);
-	while (str[i] && str[i] != c)
+	if (c == '\0')
+		return ((char *)&str[ft_len(str)]);
+	while (str[i])
+	{
+		if (str[i] == (char) c)
+			return ((char *)&str[i]);
 		i++;
-	return (i);
+	}
+	return (0);
 }
 
-/* Function to join two strings and return a new str
-containing the combination*/
-char	*ft_strjoin_dup(char *str1, char *str2)
-{
-	size_t	i;
-	size_t	j;
-	char	*strjoin;
-	size_t	len1;
-	size_t	len2;
+/*This function joins two strings together and returns a new string containing
+the combined strings.*/
 
-	i = 0;
-	j = 0;
+char	*ft_strjoin(char *str1, char *str2)
+{
+	size_t		i;
+	size_t		j;
+	char		*out;
+
 	if (!str1)
-		str1 = "";
+	{
+		str1 = (char *)malloc(sizeof(char) * 1);
+		str1[0] = '\0';
+	}
 	if (!str2)
 		return (NULL);
-	len1 = ft_strchr_len(str1, '\0');
-	len2 = ft_strchr_len(str2, '\0');
-	strjoin = malloc(sizeof(char) * (len1 + len2 +1));
-	if (!strjoin)
+	out = (char *)malloc(sizeof(char) * (ft_len(str1) + ft_len(str2) + 1));
+	if (out == NULL)
 		return (NULL);
-	while (i < len1)
-	{
-		strjoin[i] = str1[i];
-		i++;
-	}
-	while (j < len2)
-	{
-		strjoin[i] = str2[j];
-		i++;
-		j++;
-	}
-	strjoin[i] = '\0';
-	return (strjoin);
+	i = 0;
+	j = 0;
+	while (str1[i])
+		out[j++] = str1[i++];
+	i = 0;
+	while (str2[i])
+		out[j++] = str2[i++];
+	out[j] = '\0';
+	free(str1);
+	return (out);
 }
 
-/* Function to read a line of text from a FD
- and returns a str. It allocates memory and returns brings
- the content of a file */
+/*This function reads a line of text from a file descriptor
+and returns a string containing the line of text.
+ssize_t signed size.
+read(int fd, void *buf, size_t count) will return the
+ssize_t of byte read from file descriptor:
+-1 for error or the number of byte. count is the maximum
+size of bytes read*/
+
 char	*ft_line_allocation(int fd, char *str)
 {
-	char	*buffer;
-	ssize_t	status;
+	char	*buff;
+	ssize_t	dim;
 
-	buffer = malloc(sizeof(char) * (BUFFER_SIZE + 1));
-	if (!buffer)
+	buff = malloc(sizeof(char) * (BUFFER_SIZE + 1));
+	if (!buff)
 		return (NULL);
-	status = 1;
-	while (!(ft_strchr_len(str, '\n')) && status > 0)
+	dim = 1;
+	while (!(ft_strchr(str, '\n')) && dim > 0)
 	{
-		status = read(fd, buffer, BUFFER_SIZE);
-		if (status == -1)
+		dim = read(fd, buff, BUFFER_SIZE);
+		if (dim == -1)
 		{
-			free(buffer);
+			free(buff);
 			return (NULL);
 		}
-		buffer[status] = '\0';
-		str = ft_strjoin_dup(str, buffer);
-		if (!str)
-		{
-			free(buffer);
-			return (NULL);
-		}
+		buff[dim] = '\0';
+		str = ft_strjoin(str, buff);
 	}
-	free(buffer);
+	free(buff);
 	return (str);
 }
 
-/* Function to extract the next line of text from a str
-and returns a new str with the next line*/
+/*This function extracts the next line of text from a string and returns
+a new string containing the next line of text.*/
+
 char	*ft_next_line(char *str)
 {
 	char	*new;
-	size_t	line_len;
-	size_t	i;
+	int		i;
 
-	line_len = 0;
-	if (!str || str[line_len] == 0)
+	i = 0;
+	if (str[i] == 0)
 		return (NULL);
-	while (str[line_len] && str[line_len] != '\n')
-		line_len++;
-	new = malloc(line_len + 2);
+	while (str[i] && str[i] != '\n')
+		i++;
+	new = (char *)malloc(sizeof(char) * (i + 2));
 	if (!new)
 		return (NULL);
 	i = 0;
-	while (i < line_len)
+	while (str[i] && str[i] != '\n')
 	{
 		new[i] = str[i];
 		i++;
@@ -125,14 +128,15 @@ char	*ft_next_line(char *str)
 	return (new);
 }
 
-/* Function to remove read line of text from the str */
+/*This function removes the next line of text from a string
+and returns a new string containing the remaining text*/
+
 char	*ft_rem_line(char *line)
 {
 	char	*str;
-	size_t	i;
+	int		i;
+	int		j;
 
-	if (!line)
-		return (NULL);
 	i = 0;
 	while (line[i] && line[i] != '\n')
 		i++;
@@ -141,8 +145,14 @@ char	*ft_rem_line(char *line)
 		free(line);
 		return (NULL);
 	}
+	str = (char *)malloc(sizeof(char) * (ft_len(line) - i + 1));
+	if (!str)
+		return (NULL);
 	i++;
-	str = ft_strjoin_dup(&line[i], "");
+	j = 0;
+	while (line[i])
+		str[j++] = line[i++];
+	str[j] = '\0';
 	free(line);
 	return (str);
 }

@@ -32,8 +32,8 @@
 # endif
 
 size_t	ft_len(char *str);
-char	*ft_strjoin_dup(char *str1, char *str2);
-size_t	ft_strchr_len(char *str, int c);
+char	*ft_strjoin(char *str1, char *str2);
+char	*ft_strchr(char *str, int c);
 char	*ft_line_allocation(int fd, char *str);
 char	*ft_next_line(char *str);
 char	*ft_rem_line(char *line);

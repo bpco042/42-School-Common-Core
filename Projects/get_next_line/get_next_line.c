@@ -11,6 +11,18 @@
 /* ************************************************************************** */
 #include "get_next_line.h"
 
+size_t	ft_len(char *str)
+{
+	size_t	i;
+
+	i = 0;
+	if (!str)
+		return (0);
+	while (str[i])
+		i++;
+	return (i);
+}
+
 char	*get_next_line(int fd)
 {
 	char		*rtn;
