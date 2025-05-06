@@ -1,62 +1,56 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_unsigned.c                                     :+:      :+:    :+:   */
+/*   ft_hexadecimal.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bruperei <bruperei@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/02 11:20:18 by bruperei          #+#    #+#             */
-/*   Updated: 2025/05/02 11:35:41 by bruperei         ###   ########.fr       */
+/*   Created: 2025/05/05 11:20:18 by bruperei          #+#    #+#             */
+/*   Updated: 2025/05/05 11:35:41 by bruperei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_unlen(unsigned int num)
+int	ft_hexlen(unsigned int num)
 {
 	int	len;
 
 	len = 0;
 	while (num != 0)
 	{
+		num = num / 16;
 		len++;
-		num = num / 10;
 	}
 	return (len);
 }
 
-char	*ft_utoa(unsigned int num)
+void	ft_puthex(unsigned int num, const char spec)
 {
-	char	*str;
-	int		len;
-
-	len = ft_unlen(num);
-	str = malloc((len + 1) * sizeof(char *));
-	if (!str)
-		return (NULL);
-	str[len] = '\0';
-	while (num != 0)
+	if (num >= 16)
 	{
-		str[len - 1] = num % 10 + '0';
-		num = num / 10;
-		len--;
+		ft_puthex(num / 16, spec);
+		ft_puthex(num % 16, spec);
 	}
-	return (str);
-}
-
-int	ft_unsigned(unsigned int num)
-{
-	int		len;
-	char	*str;
-
-	len = 0;
-	if (num == 0)
-		len += write(1, "0", 1);
 	else
 	{
-		str = ft_utoa(num);
-		len += ft_putstr_len(str);
-		free(str);
+		if (num <= 9)
+			ft_putchar_len((num + '0'));
+		else
+		{
+			if (spec == 'x')
+				ft_putchar_len((num - 10 + 'a'));
+			if (spec == 'X')
+				ft_putchar_len((num - 10 + 'A'));
+		}
 	}
-	return (len);
+}
+
+int	ft_hex(unsigned int num, const char spec)
+{
+	if (num == 0)
+		return (write(1, "0", 1));
+	else
+		ft_puthex(num, spec);
+	return (ft_hexlen(num));
 }

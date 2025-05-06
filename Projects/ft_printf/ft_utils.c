@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft__print_utils.c                                  :+:      :+:    :+:   */
+/*   ft_utils.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bruperei <bruperei@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,38 +12,33 @@
 
 #include "ft_printf.h"
 
-// Function to print a single char and return its length (always 1)
 int	ft_putchar_len(char c)
 {
-	write(1, &c, 1); // Print an char
-	return (1); // Return the length of the printed char
+	write(1, &c, 1);
+	return (1);
 }
+//the same putchar, but returning the lenght
 
-// Function to print a string and return its printed length
 int	ft_putstr_len(char *str)
 {
-	// Handle the null case
 	if (!str)
 	{
 		write(1, "(null)", 6);
 		return (6);
 	}
-	// Otherwise, print the current string 
-	write (1, str,ft_strlen(str));
-	return (ft_strlen(str)); // Return the number of chars printed
+	write (1, str, ft_strlen(str));
+	return (ft_strlen(str));
 }
+//the same putstr but returning the lenght
 
-// Function to print an int and return the number of chars printed
 int	ft_putnbr_len(int num)
 {
-	int	len;
+	int		len;
 	char	*str;
 
-	// Convert int to a string
 	str = ft_itoa(num);
-	// Print the string and get the number of chars printed
 	len = ft_putstr_len(str);
-	// Free the allocated memory
 	free(str);
-	return (len); // Return the length of the printed chars
+	return (len);
 }
+// putnbr returning the lenght
