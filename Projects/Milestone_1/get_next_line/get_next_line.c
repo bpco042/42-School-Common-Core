@@ -33,14 +33,14 @@ char	*get_next_line(int fd)
 	// Check the validity of the buffer size and the file descriptor
 	if (BUFFER_SIZE <= 0 || fd < 0)
 		return (NULL);
-	// Allocate memory to get the line
+	// Read and store the content of the file inside str
 	str = ft_line_allocation(fd, str);
 	// Check the allocation
 	if (!str)
 		return (NULL);
-	// Get the next line of the str
+	// Get the next line of the file
 	rtn = ft_next_line(str);
-	// Check the return
+	// If there's no more lines, free str and return null
 	if (!rtn)
 	{
 		free(str);
