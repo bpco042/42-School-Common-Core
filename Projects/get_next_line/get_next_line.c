@@ -34,21 +34,29 @@ char	*get_next_line(int fd)
 	if (!str)
 		return (NULL);
 	rtn = ft_next_line(str);
+	if (!rtn)
+	{
+		free(str);
+		str = NULL;
+		return (NULL);
+	}
 	str = ft_rem_line(str);
 	return (rtn);
 }
 /*int	main(void)
-{ão com `Valgrind`, c
-		return (1);
-	}
-	while (1)
+{
+	char		*s;
+	int		i;
+	int		fd;
+
+	fd = open("file.txt", O_RDONLY);
+	i = 1;
+	while (i < 15)
 	{
 		s = get_next_line(fd);
-		if (s == NULL)
-			break;
-		printf("line %d: %s", line_nb, s);
+		printf("line [%02d]: %s", i, s);
 		free(s);
-		line_nb++;
+		i++;
 	}
 	close(fd);
 	return (0);
