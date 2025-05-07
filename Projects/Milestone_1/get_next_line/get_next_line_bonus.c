@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 #include "get_next_line_bonus.h"
 
+// Function similar to strlen
 size_t	ft_len(char *str)
 {
 	size_t	i;
@@ -22,28 +23,33 @@ size_t	ft_len(char *str)
 		i++;
 	return (i);
 }
-
+// Function to find a node. Else, create one.
 t_fd_list	*find_create_fd(t_fd_list **head, int fd)
 {
 	t_fd_list	*temp;
 
 	temp = *head;
+	// Traverse the list to find the node
 	while (temp)
 	{
 		if (temp->fd == fd)
-			return (temp);
+			return (temp); // Found it, so return the node
 		temp = temp->next;
 	}
+	// If the fd is not found, allocate memory to create a new one
 	temp = malloc(sizeof(t_fd_list));
 	if (!temp)
-		return (NULL);
+		return (NULL); // Return null in case of failure
+	// Initialize the new node
 	temp->fd = fd;
 	temp->buffer = NULL;
 	temp->next = *head;
+	// Insert the new node at the beginning of the list
 	*head = temp;
 	return (temp);
 }
 
+// Remove the node from the list
 void	remove_fd(t_fd_list **head, int fd)
 {
 	t_fd_list	*current;
@@ -51,14 +57,18 @@ void	remove_fd(t_fd_list **head, int fd)
 
 	current = *head;
 	previous = NULL;
+
+	// Traverse the list to find the fd node
 	while (current)
 	{
+		// Connect the previous node to the next, removing the current one
 		if (current->fd == fd)
 		{
 			if (previous)
 				previous->next = current->next;
 			else
 				*head = current->next;
+			// Free up the buffer and the node
 			free(current->buffer);
 			free(current);
 			return ;
@@ -68,28 +78,36 @@ void	remove_fd(t_fd_list **head, int fd)
 	}
 }
 
+// Main function of get_next_line
 char	*get_next_line(int fd)
 {
-	static t_fd_list	*fd_list;
+	static t_fd_list	*fd_list; // Static list that stores the fds
 	t_fd_list			*node;
 	char				*line;
 
+	// Check the buffer size and the fd
 	if (BUFFER_SIZE <= 0 || fd < 0)
 		return (NULL);
+	// Search or create the node/fd
 	node = find_create_fd(&fd_list, fd);
 	if (!node)
 		return (NULL);
+	// Read the fd and store the content in the buffer
 	node->buffer = ft_line_allocation(fd, node->buffer);
 	if (!node->buffer)
 	{
+		// If the reading fails or ends, remove the node and return null
 		remove_fd(&fd_list, fd);
 		return (NULL);
 	}
+	// Extract the next line of the buffer
 	line = ft_next_line(node->buffer);
+	// Remove the extracted line from the buffer, updating the rest of the content
 	node->buffer = ft_rem_line(node->buffer);
+	// If no line was extracted or and error happened, remove the node
 	if (!line)
 		remove_fd(&fd_list, fd);
-	return (line);
+	return (line); // Return the line
 }
 /*int	main(void)
 {
