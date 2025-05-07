@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 #include "get_next_line.h"
 
+//Function similar to ft_strlen
 size_t	ft_len(char *str)
 {
 	size_t	i;
@@ -23,23 +24,30 @@ size_t	ft_len(char *str)
 	return (i);
 }
 
+//Main function of gnl
 char	*get_next_line(int fd)
 {
 	char		*rtn;
 	static char	*str;
 
+	// Check the validity of the buffer size and the file descriptor
 	if (BUFFER_SIZE <= 0 || fd < 0)
 		return (NULL);
+	// Allocate memory to get the line
 	str = ft_line_allocation(fd, str);
+	// Check the allocation
 	if (!str)
 		return (NULL);
+	// Get the next line of the str
 	rtn = ft_next_line(str);
+	// Check the return
 	if (!rtn)
 	{
 		free(str);
 		str = NULL;
 		return (NULL);
 	}
+	// Remove the allocated line from the buffer
 	str = ft_rem_line(str);
 	return (rtn);
 }
